@@ -1,0 +1,37 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message MemberReq {
+    required SKBuiltinString_t memberName = 1;
+}
+
+message MemberResp {
+    required SKBuiltinString_t memberName = 1;
+    required uint32 memberStatus = 2;
+    required SKBuiltinString_t nickName = 3;
+    required SKBuiltinString_t pyInitial = 4;
+    required SKBuiltinString_t quanPin = 5;
+    required int32 sex = 6;
+    required SKBuiltinString_t remark = 9;
+    required SKBuiltinString_t remarkPYInitial = 10;
+    required SKBuiltinString_t remarkQuanPin = 11;
+    required uint32 contactType = 12;
+    optional string province = 13;
+    optional string city = 14;
+    optional string signature = 15;
+    optional uint32 personalCard = 16;
+    optional uint32 verifyFlag = 17;
+    optional string verifyInfo = 18;
+    optional string country = 19;
+}
+
+message DelMemberReq {
+    required SKBuiltinString_t memberName = 1;
+}
+
+message DelMemberResp {
+    required SKBuiltinString_t memberName = 1;
+}

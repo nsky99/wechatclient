@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+message ProxyInfo {
+    optional uint32 status = 1;
+    optional string ip = 2;
+    optional uint32 port = 3;
+    optional string username = 4;
+    optional string passwd = 5;
+}

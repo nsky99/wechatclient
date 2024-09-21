@@ -1,0 +1,40 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message StatusNotifyUnreadChat {
+    optional string userName = 1;
+    required uint32 lastReadTime = 2;
+}
+
+message StatusNotifyFunction {
+    optional string name = 1;
+    optional string arg = 2;
+}
+
+message StatusNotifyRequest {
+    required BaseRequest baseRequest = 1;
+    required uint32 code = 2;
+    optional string fromUserName = 3;
+    optional string toUserName = 4;
+    optional string clientMsgId = 5;
+    optional uint32 unreadChatListCount = 6;
+    repeated StatusNotifyUnreadChat unreadChatList = 7;
+    optional StatusNotifyFunction function = 8;
+    optional uint32 unreadFunctionCount = 9;
+    repeated StatusNotifyFunction unreadFunctionList = 10;
+}
+
+message ChatContact {
+    optional string UserName = 1;
+}
+
+message StatusNotifyResponse {
+    required BaseResponse BaseResponse = 1;
+    required uint32 MsgId = 2;
+    optional uint64 NewMsgId = 3;
+    optional uint32 ChatContactCount = 4;
+    repeated ChatContact ChatContactList = 5;
+}

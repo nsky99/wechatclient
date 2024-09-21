@@ -1,0 +1,91 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message GetA8KeyReq {
+    required BaseRequest baseRequest = 1;
+    required uint32 opCode = 2;
+    optional SKBuiltinBuffer_t a2Key = 3;
+    optional SKBuiltinString_t appId = 4;
+    optional SKBuiltinString_t scope = 5;
+    optional SKBuiltinString_t state = 6;
+    optional SKBuiltinString_t reqUrl = 7;
+    optional string friendUserName = 8;
+    optional uint32 friendQQ = 9;
+    optional uint32 scene = 10;
+    optional string userName = 11;
+    optional string bundleId = 12;
+    optional SKBuiltinBuffer_t a2KeyNew = 13;
+    optional uint32 reason = 14;
+    optional uint32 fontScale = 15;
+    optional uint32 flag = 16;
+    optional string netType = 17;
+    optional uint32 codeType = 18;
+    optional uint32 codeVersion = 19;
+    optional uint32 requestId = 20;
+    optional string functionId = 21;
+    optional uint32 walletRegion = 22;
+    optional SKBuiltinBuffer_t cookie = 23;
+    optional string outerUrl = 24;
+    optional uint32 subScene = 25;
+}
+
+message JSAPIPermissionBitSet {
+    required uint32 bitValue = 1;
+    optional uint32 bitValue2 = 2;
+    optional uint32 bitValue3 = 3;
+    optional uint32 bitValue4 = 4;
+}
+
+message GeneralControlBitSet {
+    required uint32 bitValue = 1;
+}
+
+message DeepLinkBitSet {
+    required uint64 bitValue = 1;
+}
+
+message BizApiInfo {
+    optional string apiName = 1;
+}
+
+message BizScopeInfo {
+    optional string scope = 1;
+    required uint32 scopeStatus = 2;
+    optional string scopeDesc = 3;
+    required uint32 apiCount = 4;
+    repeated BizApiInfo apiList = 5;
+}
+
+message HttpHeader {
+    optional string key = 1;
+    optional string value = 2;
+}
+
+message GetA8KeyResp {
+    required BaseResponse baseResponse = 1;
+    optional string fullUrl = 2;
+    optional string a8Key = 3;
+    optional uint32 actionCode = 4;
+    optional string title = 5;
+    optional string content = 6;
+    optional JSAPIPermissionBitSet jsapipermission = 7;
+    optional GeneralControlBitSet generalControlBitSet = 8;
+    optional string userName = 9;
+    optional string shareUrl = 15;
+    optional uint32 scopeCount = 16;
+    repeated BizScopeInfo scopeList = 17;
+    optional string antispamTicket = 18;
+    optional string ssid = 20;
+    optional string mid = 21;
+    optional DeepLinkBitSet deepLinkBitSet = 22;
+    optional SKBuiltinBuffer_t jsapicontrolBytes = 23;
+    optional uint32 httpHeaderCount = 24;
+    repeated HttpHeader httpHeaderList = 25;
+    optional string wording = 26;
+    optional string headImg = 27;
+    optional SKBuiltinBuffer_t cookie = 28;
+    optional string menuWording = 29;
+}

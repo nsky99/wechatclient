@@ -1,0 +1,54 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message AppMsg {
+    optional string fromUserName = 1;
+    optional string appId = 2;
+    required uint32 sdkVersion = 3;
+    optional string toUserName = 4;
+    required uint32 type = 5;
+    optional string content = 6;
+    required uint32 createTime = 7;
+    optional string clientMsgId = 8;
+    optional SKBuiltinBuffer_t thumb = 9;
+    optional int32 source = 10;
+    optional int32 remindId = 11;
+    optional string msgSource = 12;
+    optional string shareUrlOriginal = 13;
+    optional string shareUrlOpen = 14;
+    optional string jsAppId = 15;
+}
+
+message SendAppMsgRequest {
+    required BaseRequest baseRequest = 1;
+    required AppMsg msg = 2;
+    optional string commentUrl = 3;
+    optional uint32 reqTime = 4;
+    optional string md5 = 5;
+    optional uint32 fileType = 6;
+    optional string signature = 7;
+    optional string fromSence = 8;
+    optional uint32 hitMd5 = 9;
+    optional uint32 crc32 = 10;
+    optional uint32 msgForwardType = 11;
+    optional uint32 directShare = 12;
+    optional string sendMsgTicket = 13;
+}
+
+message SendAppMsgResponse {
+    required BaseResponse baseResponse = 1;
+    optional string appId = 2;
+    optional string fromUserName = 3;
+    optional string toUserName = 4;
+    required uint32 msgId = 5;
+    optional string clientMsgId = 6;
+    required uint32 createTime = 7;
+    optional uint32 type = 8;
+    optional uint64 newMsgId = 9;
+    optional string aeskey = 10;
+    optional string msgSource = 11;
+    optional uint32 actionFlag = 12;
+}

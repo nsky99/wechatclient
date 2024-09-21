@@ -1,0 +1,42 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message CDNClientConfig {
+    required int32 c2CshowErrorDelayMs = 1;
+    required int32 snsshowErrorDelayMs = 2;
+    required int32 c2CretryInterval = 3;
+    required int32 snsretryInterval = 4;
+    required int32 c2Crwtimeout = 5;
+    required int32 snsrwtimeout = 6;
+}
+
+message GetCDNDnsRequest {
+    required BaseRequest baseRequest = 1;
+    optional string clientIp = 2;
+    optional uint32 scene = 3;
+}
+
+message WxUserIdcInfo {
+    optional string uuid = 1;
+    optional SKBuiltinBuffer_t extInfo = 2;
+}
+
+message GetCDNDnsResponse {
+    required BaseResponse baseResponse = 1;
+    required CDNDnsInfo dnsInfo = 2;
+    optional CDNDnsInfo snsDnsInfo = 3;
+    optional CDNDnsInfo appDnsInfo = 4;
+    optional SKBuiltinBuffer_t cdndnsRuleBuf = 5;
+    optional SKBuiltinBuffer_t fakeCdndnsRuleBuf = 6;
+    optional CDNDnsInfo fakeDnsInfo = 7;
+    required int32 getCdnDnsIntervalMs = 8;
+    optional CDNClientConfig defaultConfig = 9;
+    optional CDNClientConfig disasterConfig = 10;
+    optional int32 nextIpv6 = 11;
+    optional CDNDnsInfo c2CRoamDnsInfo = 12;
+    optional WxUserIdcInfo cdnUserIdcInfo = 13;
+    optional int32 vcodec1Limit = 14;
+}

@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+import "MicroSnsBase.proto";
+
+message SnsCommentRequest {
+    required BaseRequest baseRequest = 1;
+    required SnsActionGroup action = 2;
+    optional string clientId = 3;
+}
+
+message SnsCommentResponse {
+    required BaseResponse baseResponse = 1;
+    required SnsObject snsObject = 2;
+}

@@ -1,0 +1,30 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message GetLoginQRCodeRequest {
+    optional BaseRequest baseRequest = 1;
+    optional SKBuiltinBuffer_t randomEncryKey = 2;
+    optional uint32 opcode = 3;
+    optional bytes deviceName = 4;
+    optional string userName = 5;
+    optional uint32 extDevLoginType = 6;
+    optional string hardwareExtra = 7;
+    optional string softType = 8;
+    optional SKBuiltinBuffer_t msgContextPubKey = 9;
+}
+
+message GetLoginQRCodeResponse {
+    optional BaseResponse baseResponse = 1;
+    optional SKBuiltinBuffer_t qrcode = 2;
+    optional string uuid = 3;
+    optional uint32 checkTime = 4;
+    optional SKBuiltinBuffer_t notifyKey = 5;
+    optional uint32 expiredTime = 6;
+    optional string blueToothBroadCastUuid = 7;
+    optional SKBuiltinBuffer_t blueToothBroadCastContent = 8;
+    optional string fileTransferAssistant = 9;
+    optional string qrScanUrl = 10;
+}

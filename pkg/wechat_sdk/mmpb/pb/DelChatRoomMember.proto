@@ -1,0 +1,20 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+import "MicroRoomBase.proto";
+
+message DelChatRoomMemberRequest {
+    required BaseRequest baseRequest = 1;
+    required uint32 memberCount = 2;
+    repeated DelMemberReq memberList = 3;
+    optional string chatRoomName = 4;
+    optional uint32 scene = 5;
+}
+
+message DelChatRoomMemberResponse {
+    required BaseResponse baseResponse = 1;
+    required uint32 memberCount = 2;
+    repeated DelMemberResp memberList = 3;
+}

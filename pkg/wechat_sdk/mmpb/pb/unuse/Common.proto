@@ -1,0 +1,9 @@
+// syntax = "proto2";
+
+// // package microcommon;
+
+// message Response {
+//     optional int32 ret = 1;
+//     optional string errMsg = 2;
+//     optional string extend = 3;
+// }

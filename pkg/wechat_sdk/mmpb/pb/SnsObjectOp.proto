@@ -1,0 +1,28 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+import "MicroSnsBase.proto";
+
+message SnsYearMonthInfo {
+    required uint32 year = 1;
+    required uint32 month = 2;
+    required uint64 lastId = 3;
+}
+
+message SnsObjectOpRequest {
+    required BaseRequest baseRequest = 1;
+    required uint32 opCount = 2;
+    repeated SnsObjectOp opList = 3;
+    optional SKBuiltinBuffer_t extSpamInfo = 4;
+}
+
+message SnsObjectOpResponse {
+    required BaseResponse baseResponse = 1;
+    required uint32 opCount = 2;
+    repeated int32 opRetList = 3 [packed = true];
+    optional uint32 updateYearMonthInfo = 4;
+    optional uint32 yearMonthInfoCount = 5;
+    repeated SnsYearMonthInfo yearMonthInfoList = 6;
+}

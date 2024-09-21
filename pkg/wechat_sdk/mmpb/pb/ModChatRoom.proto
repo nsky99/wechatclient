@@ -1,0 +1,67 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message ModChatRoomMember {
+    required SKBuiltinString_t userName = 1;
+    required SKBuiltinString_t nickName = 2;
+    required SKBuiltinString_t pyInitial = 3;
+    required SKBuiltinString_t quanPin = 4;
+    required int32 sex = 5;
+    required SKBuiltinBuffer_t imgBuf = 6;
+    required uint32 imgFlag = 7;
+    required SKBuiltinString_t remark = 8;
+    required SKBuiltinString_t remarkPYInitial = 9;
+    required SKBuiltinString_t remarkQuanPin = 10;
+    required uint32 contactType = 11;
+    optional string province = 12;
+    optional string city = 13;
+    optional string signature = 14;
+    optional uint32 personalCard = 15;
+    optional uint32 verifyFlag = 16;
+    optional string verifyInfo = 17;
+    optional string weibo = 18;
+    optional string verifyContent = 19;
+    optional string weiboNickname = 20;
+    optional uint32 weiboFlag = 21;
+    optional int32 albumStyle = 22;
+    optional int32 albumFlag = 23;
+    optional string albumBgImgID = 24;
+    optional string alias = 25;
+    optional SnsUserInfo snsUserInfo = 26;
+    optional string country = 27;
+    optional string bigHeadImgUrl = 28;
+    optional string smallHeadImgUrl = 29;
+    optional string myBrandList = 30;
+    optional CustomizedInfo customizedInfo = 31;
+}
+
+message QuitChatRoom {
+    required SKBuiltinString_t chatRoomName = 1;
+    required SKBuiltinString_t userName = 2;
+}
+
+message ModChatRoomTopic {
+    required SKBuiltinString_t chatRoomName = 1;
+    required SKBuiltinString_t chatRoomTopic = 2;
+}
+
+message ModChatRoomMemberDisplayName {
+    optional string chatRoomName = 1;
+    optional string userName = 2;
+    optional string displayName = 3;
+}
+
+message ModChatRoomMemberFlag {
+    optional string chatRoomName = 1;
+    optional string userName = 2;
+    required uint32 flagSwitch = 3;
+    required uint32 value = 4;
+}
+
+message ModChatRoomNotify {
+    required SKBuiltinString_t chatRoomName = 1;
+    required uint32 status = 2;
+}

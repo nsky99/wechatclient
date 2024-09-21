@@ -1,0 +1,23 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message SendPatRequest {
+    required BaseRequest baseRequest = 1;
+    optional string fromUsername = 2;
+    optional string chatUsername = 3;
+    optional string pattedUsername = 4;
+    optional string clientMsgId = 5;
+    optional uint32 scene = 6;
+}
+
+message SendPatResponse {
+    optional BaseResponse baseResponse = 1;
+    optional string tmpl = 2;
+    optional string selfMsg = 3;
+    optional string patSuffix = 4;
+    optional uint64 msgId = 5;
+    optional uint32 patSuffixVersion = 6;
+}

@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+message RoomMemberInfo {
+    optional string username = 1;
+    optional string displayName = 2;
+    optional uint32 type = 3;
+}
+
+message RoomData {
+    repeated RoomMemberInfo memberInfo = 1;
+}

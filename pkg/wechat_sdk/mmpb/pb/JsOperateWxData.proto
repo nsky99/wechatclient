@@ -1,0 +1,31 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message JsOperateWxDataVipRequest {
+    optional BaseRequest baseRequest = 1;
+    optional string appid = 2;
+    optional bytes data = 3;
+    optional string grantScope = 4;
+    optional int32 opt = 5;
+    optional int32 versionType = 6;
+    optional WxaExternalInfo extInfo = 7;
+    optional int32 avatarId = 8;
+}
+
+message JsOperateWxDataVipResponse {
+    optional BaseResponse baseResponse = 1;
+    optional JsApiBaseResponse jsApiBaseResponse = 2;
+    optional bytes data = 3;
+    optional ScopeInfo scope = 4;
+    optional string appName = 5;
+    optional string appIconUrl = 6;
+    optional string debugInfo = 7;
+    optional bool needHoldLongconn = 8;
+    optional string cancelWording = 9;
+    optional string allowWording = 10;
+    optional string applyWording = 11;
+    optional AvatarInfoList avatarInfo = 12;
+}

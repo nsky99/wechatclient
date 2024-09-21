@@ -1,0 +1,37 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+import "MicroSnsBase.proto";
+
+message SnsUploadRequest {
+    required BaseRequest baseRequest = 1;
+    required uint32 type = 2;
+    required uint32 startPos = 3;
+    required uint32 totalLen = 4;
+    required SKBuiltinBuffer_t buffer = 5;
+    optional string clientId = 6;
+    optional uint32 filterStype = 7;
+    optional uint32 syncFlag = 8;
+    optional string description = 9;
+    optional int32 photoFrom = 10;
+    optional int32 netType = 11;
+    optional TwitterInfo twitterInfo = 12;
+    optional string appId = 13;
+    optional uint32 extFlag = 14;
+    optional string md5 = 15;
+    optional uint32 objectType = 16;
+}
+
+message SnsUploadResponse {
+    required BaseResponse baseResponse = 1;
+    required uint32 startPos = 2;
+    required uint32 totalLen = 3;
+    optional string clientId = 4;
+    required SnsBufferUrl bufferUrl = 5;
+    required uint32 thumbUrlCount = 6;
+    repeated SnsBufferUrl thumbUrls = 7;
+    required uint64 id = 8;
+    required uint32 type = 9;
+}

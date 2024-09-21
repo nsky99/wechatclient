@@ -1,0 +1,24 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message NewInitRequest {
+    required BaseRequest baseRequest = 1;
+    optional string username = 2;
+    required SKBuiltinBuffer_t currentSynckey = 3;
+    required SKBuiltinBuffer_t maxSynckey = 4;
+    optional string language = 5;
+}
+
+message NewInitResponse {
+    required BaseResponse baseResponse = 1;
+    required SKBuiltinBuffer_t currentSynckey = 2;
+    required SKBuiltinBuffer_t maxSynckey = 3;
+    required uint32 continueFlag = 4;
+    required uint32 selectBitmap = 5;
+    required uint32 cmdCount = 6;
+    repeated CmdItem cmdList = 7;
+    required uint32 ratio = 8;
+}

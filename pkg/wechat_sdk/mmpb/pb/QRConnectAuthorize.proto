@@ -1,0 +1,50 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message OauthScopeInfo {
+    optional string scope = 1;
+    optional string desc = 2;
+    optional uint32 authState = 3;
+}
+
+message OauthAvatarInfo {
+    optional uint32 id = 1;
+    optional string nickname = 2;
+    optional string avatarurl = 3;
+    optional string desc = 4;
+}
+
+message QRConnectAuthorizeReq {
+    required BaseRequest baseRequest = 1;
+    optional string oauthUrl = 2;
+}
+
+message QRConnectAuthorizeResp {
+    required BaseResponse baseResponse = 1;
+    optional bool isReturnH5 = 2;
+    repeated OauthScopeInfo scopeList = 3;
+    optional string appid = 4;
+    optional string appname = 5;
+    optional string appiconUrl = 6;
+    repeated OauthAvatarInfo avatarList = 7;
+    optional bool isBanModifyAvatar = 8;
+    optional uint32 avatarLimit = 9;
+    optional uint32 defaultAvatarId = 10;
+    optional string defaultHeadimgUrl = 11;
+    optional string defaultHeadimgFileid = 12;
+}
+
+message QRConnectAuthorizeConfirmReq {
+    required BaseRequest baseRequest = 1;
+    optional string oauthUrl = 2;
+    optional uint32 opt = 3;
+    repeated string scope = 4;
+    optional uint32 avatarId = 5;
+}
+
+message QRConnectAuthorizeConfirmResp {
+    required BaseResponse baseResponse = 1;
+}

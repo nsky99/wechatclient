@@ -1,0 +1,23 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message SnsDownloadRequest {
+    required BaseRequest baseRequest = 1;
+    required int32 startPos = 2;
+    optional int32 totalLen = 3;
+    optional string bufferId = 4;
+    required uint32 type = 5;
+    required uint32 downBufLen = 6;
+}
+
+message SnsDownloadResponse {
+    required BaseResponse baseResponse = 1;
+    required int32 startPos = 2;
+    required int32 totalLen = 3;
+    required SKBuiltinBuffer_t buffer = 4;
+    optional string bufferId = 5;
+    required uint32 type = 6;
+}

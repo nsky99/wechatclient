@@ -1,0 +1,16 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message SetChatRoomAnnouncementRequest {
+    required BaseRequest baseRequest = 1;
+    optional string chatRoomName = 2;
+    optional string announcement = 3;
+    optional uint32 setAnnouncementFlag = 4;
+}
+
+message SetChatRoomAnnouncementResponse {
+    required BaseResponse baseResponse = 1;
+}

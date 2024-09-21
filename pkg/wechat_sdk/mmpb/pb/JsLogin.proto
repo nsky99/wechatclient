@@ -1,0 +1,31 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message JsLoginRequest {
+    optional BaseRequest baseRequest = 1;
+    optional string appid = 2;
+    repeated string scope = 3;
+    optional int32 loginType = 4;
+    optional string url = 5;
+    optional string state = 6;
+    optional int32 versionType = 7;
+    optional WxaExternalInfo extInfo = 8;
+}
+
+message JsLoginResponse {
+    optional BaseResponse baseResponse = 1;
+    optional JsApiBaseResponse jsApiBaseResponse = 2;
+    optional string code = 3;
+    repeated ScopeInfo scopeList = 4;
+    optional string appName = 5;
+    optional string appIconUrl = 6;
+    optional string openId = 7;
+    optional string sessionKey = 8;
+    optional string sessionTicket = 9;
+    optional int32 liftSpan = 10;
+    optional string state = 11;
+    optional string signature = 12;
+}

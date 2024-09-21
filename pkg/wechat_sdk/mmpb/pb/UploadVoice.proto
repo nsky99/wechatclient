@@ -1,0 +1,42 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message UploadVoiceRequest {
+    optional string fromUserName = 1;
+    optional string toUserName = 2;
+    optional uint32 offset = 3;
+    optional int32 length = 4;
+    optional string clientMsgId = 5;
+    optional uint32 msgId = 6;
+    optional int32 voiceLength = 7;
+    optional SKBuiltinBuffer_t data = 8;
+    optional uint32 endFlag = 9;
+    optional BaseRequest baseRequest = 10;
+    optional uint32 cancelFlag = 11;
+    optional string msgSource = 12;
+    optional int32 voiceFormat = 13;
+    optional uint32 uiCreateTime = 14;
+    optional uint32 forwardFlag = 15;
+    optional uint64 newMsgId = 16;
+    optional int32 reqTime = 17;
+    optional SKBuiltinBuffer_t voiceId = 18;
+    optional uint32 offst = 19;
+}
+
+message UploadVoiceResponse {
+    optional string fromUserName = 1;
+    optional string toUserName = 2;
+    optional uint32 offset = 3;
+    optional int32 length = 4;
+    optional uint32 createTime = 5;
+    optional string clientMsgId = 6;
+    optional uint32 msgId = 7;
+    optional uint32 voiceLength = 8;
+    optional uint32 endFlag = 9;
+    optional BaseResponse baseResponse = 10;
+    optional uint32 cancelFlag = 11;
+    optional uint64 newMsgId = 12;
+}

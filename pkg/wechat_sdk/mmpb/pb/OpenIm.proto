@@ -1,0 +1,133 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+import "Finder.proto";
+
+message OpenIMContact {
+    optional string tpUsername = 1;
+    optional string nickname = 2;
+    optional uint32 type = 3;
+    optional string remark = 4;
+    optional string bigHeadimg = 5;
+    optional string smallHeadimg = 6;
+    optional uint32 source = 7;
+    optional string nicknamePyinit = 8;
+    optional string nicknameQuanpin = 9;
+    optional string remarkPyinit = 10;
+    optional string remarkQuanpin = 11;
+    optional OpenIMContactCustomInfo customInfo = 12;
+    optional string antispamTicket = 13;
+    optional string appId = 14;
+    optional uint32 sex = 15;
+    optional string descWordingId = 16;
+    optional string finderUsername = 17;
+    optional uint64 flag = 18;
+}
+
+message GetOpenIMContactReq {
+    required string tpUsername = 1;
+    optional string roomname = 2;
+    optional string ticket = 3;
+}
+
+message GetOpenIMContactResp {
+    required int32 ret = 1;
+    optional OpenIMContact contact = 2;
+}
+
+message GetOpenIMResourceReq {
+    optional string language = 1;
+    optional string appId = 2;
+    repeated string wordingId = 3;
+    optional uint32 subtype = 4;
+}
+
+message OpenIMWording {
+    optional string key = 1;
+    optional string wording = 2;
+}
+
+message OpenIMUrl {
+    optional string key = 1;
+    optional string url = 2;
+}
+
+message AppIdResource {
+    optional uint32 functionFlag = 1;
+    repeated OpenIMWording wordings = 2;
+    repeated OpenIMUrl urls = 3;
+}
+
+message AcctTypeResource {
+    optional string acctTypeId = 1;
+    repeated OpenIMWording wordings = 2;
+    repeated OpenIMUrl urls = 3;
+}
+
+message WordingIdResource {
+    optional string wordingId = 1;
+    optional string wording = 2;
+    optional string pinyin = 3;
+    optional string quanpin = 4;
+}
+
+message GetOpenIMResourceResp {
+    optional BaseResponse baseResponse = 1;
+    optional AppIdResource appidResource = 2;
+    optional AcctTypeResource acctTypeResource = 3;
+    repeated WordingIdResource wordingIdResource = 4;
+}
+
+message SearchOpenIMContactItem {
+    optional string userName = 1;
+    optional string nickName = 2;
+    optional string pyinitial = 3;
+    optional string quanPin = 4;
+    optional uint32 sex = 5;
+    optional string bigHeadImgUrl = 6;
+    optional string smallHeadImgUrl = 7;
+    optional string appId = 8;
+    optional uint32 matchType = 9;
+    optional OpenIMContactCustomInfo customInfo = 10;
+    optional string antispamTicket = 11;
+    optional string finderUsername = 12;
+    optional uint32 flag = 13;
+}
+
+message SearchOpenIMContactReq {
+    optional string tpQrcode = 1;
+    optional string mobile = 2;
+    optional uint32 tpType = 3;
+    optional string tpMultiUserQrcode = 4;
+}
+
+message SearchOpenIMContactResp {
+    required BaseResponse baseResponse = 1;
+    optional SearchOpenIMContactItem contact = 2;
+    optional string url = 3;
+}
+
+message AddOpenIMContactReq {
+    required string tpUsername = 1;
+    required string antispamTicket = 2;
+    optional uint64 friendFlag = 3;
+}
+
+message AddOpenIMContactResp {
+    required BaseResponse baseResponse = 1;
+}
+
+message OpenIMDelContactOplog {
+    optional string tpUsername = 1;
+}
+
+message OpenIMOplogReq {
+    required uint32 type = 1;
+    required bytes buf = 2;
+}
+
+message OpenIMOplogResp {
+    optional BaseResponse baseResponse = 1;
+}

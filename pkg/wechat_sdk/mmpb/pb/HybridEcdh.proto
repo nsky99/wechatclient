@@ -1,0 +1,21 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+
+message HybridEcdhRequest{
+    optional int32 type = 1;
+    optional SKBuiltinBuffer_t SecECDHKey = 2;
+    optional bytes randomkeydata = 3;
+    optional bytes randomkeyextenddata = 4;
+    optional bytes encyptdata = 5;
+}
+
+message HybridEcdhResponse{
+    optional SKBuiltinBuffer_t SecECDHKey = 1;
+    optional int32 type = 2;
+    optional bytes decryptdata = 3;
+    optional bytes randomkeyextenddata = 4;
+}

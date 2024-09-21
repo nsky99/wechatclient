@@ -1,0 +1,23 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+import "MicroRoomBase.proto";
+
+message AddChatRoomMemberRequest {
+    required BaseRequest baseRequest = 1;
+    required uint32 memberCount = 2;
+    repeated MemberReq memberList = 3;
+    required SKBuiltinString_t chatRoomName = 4;
+    optional uint32 lastRoomMsgTimeStamp = 5;
+    optional string accessApplicationDesp = 6;
+    optional HistoryInfo history = 7;
+}
+
+message AddChatRoomMemberResponse {
+    required BaseResponse baseResponse = 1;
+    required uint32 memberCount = 2;
+    repeated MemberResp memberList = 3;
+    optional string tips = 4;
+}

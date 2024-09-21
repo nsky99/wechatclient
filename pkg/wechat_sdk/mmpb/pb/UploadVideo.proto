@@ -1,0 +1,105 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message SendVideoUploadMsgReq {
+    required BaseRequest baseRequest = 1;
+    optional string clientMsgId = 2;
+    optional string fromUserName = 3;
+    optional string toUserName = 4;
+    optional string cdnthumbUrl = 5;
+    optional string cdnthumbAeskey = 6;
+    optional uint32 cdnthumbImgSize = 7;
+    optional uint32 cdnthumbImgHeight = 8;
+    optional uint32 cdnthumbImgWidth = 9;
+    optional uint32 playLength = 10;
+    optional string msgSource = 11;
+    optional string videoMd5 = 12;
+    optional string videoNewMd5 = 13;
+    optional uint32 videoLength = 14;
+    optional string rawVideoMd5 = 15;
+    optional uint32 rawVideoLength = 16;
+    optional string appId = 17;
+    optional string messageAction = 18;
+    optional string messageExt = 19;
+    optional string mediaTagName = 20;
+    optional string cdnthumbMd5 = 21;
+}
+
+message SendVideoUploadMsgResp {
+    required BaseResponse baseResponse = 1;
+    optional uint64 newMsgId = 2;
+    optional string videoUploadToken = 3;
+}
+
+message UploadVideoRequest {
+    required BaseRequest baseRequest = 1;
+    optional string clientMsgId = 2;
+    optional string fromUserName = 3;
+    optional string toUserName = 4;
+    required uint32 thumbTotalLen = 5;
+    required uint32 thumbStartPos = 6;
+    required SKBuiltinBuffer_t thumbData = 7;
+    required uint32 videoTotalLen = 8;
+    required uint32 videoStartPos = 9;
+    required SKBuiltinBuffer_t videoData = 10;
+    required uint32 playLength = 11;
+    optional uint32 networkEnv = 12;
+    optional uint32 cameraType = 13;
+    optional uint32 funcFlag = 14;
+    optional string msgSource = 15;
+    optional string cdnvideoUrl = 16;
+    optional string aeskey = 17;
+    optional int32 encryVer = 18;
+    optional string cdnthumbUrl = 19;
+    optional int32 cdnthumbImgSize = 20;
+    optional int32 cdnthumbImgHeight = 21;
+    optional int32 cdnthumbImgWidth = 22;
+    optional string cdnthumbAeskey = 23;
+    optional int32 videoFrom = 24;
+    optional uint32 reqTime = 25;
+    optional string videoMd5 = 26;
+    optional string streamVideoUrl = 27;
+    optional uint32 streamVideoTotalTime = 28;
+    optional string streamVideoTitle = 29;
+    optional string streamVideoWording = 30;
+    optional string streamVideoWebUrl = 31;
+    optional string streamVideoThumbUrl = 32;
+    optional string streamVideoPublishId = 33;
+    optional string streamVideoAdUxInfo = 34;
+    optional string statExtStr = 35;
+    optional uint32 hitMd5 = 36;
+    optional string videoNewMd5 = 37;
+    optional uint32 crc32 = 38;
+    optional uint32 msgForwardType = 39;
+    optional uint32 source = 40;
+    optional string sendMsgTicket = 41;
+    optional string appId = 42;
+    optional string messageAction = 43;
+    optional string messageExt = 44;
+    optional string mediaTagName = 45;
+    optional string videoUploadToken = 46;
+    optional uint64 overwriteNewMsgId = 47;
+    optional string rawVideoMd5 = 48;
+    optional string rawVideoFileId = 49;
+    optional string rawVideoAeskey = 50;
+    optional uint32 rawVideoLength = 51;
+    optional uint32 hitRawMd5 = 52;
+}
+
+message UploadVideoResponse {
+    required BaseResponse baseResponse = 1;
+    optional string clientMsgId = 2;
+    required uint32 msgId = 3;
+    required uint32 thumbStartPos = 4;
+    required uint32 videoStartPos = 5;
+    optional uint64 newMsgId = 6;
+    optional string aeskey = 7;
+    optional string msgSource = 8;
+    optional uint32 actionFlag = 9;
+    optional bool videoNeedReupload = 10;
+    optional bool rawVideoNeedReupload = 11;
+    optional string rawAeskey = 12;
+}

@@ -1,0 +1,19 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message InitContactRequest {
+    optional string username = 1;
+    optional int32 currentWxcontactSeq = 2;
+    optional int32 currentChatRoomContactSeq = 3;
+}
+
+message InitContactResponse {
+    optional BaseResponse baseResponse = 1;
+    optional int32 currentWxcontactSeq = 2;
+    optional int32 currentChatRoomContactSeq = 3;
+    optional int32 countinueFlag = 4;
+    repeated string contactUsernameList = 5;
+}

@@ -1,0 +1,53 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message H5AuthRequest {
+    required BaseRequest baseRequest = 1;
+    optional uint32 h5Version = 2;
+    optional string h5Domain = 3;
+    optional SKBuiltinBuffer_t ccdata = 4;
+    optional string scope = 5;
+}
+
+message H5AuthResponse {
+    optional BaseResponse baseResponse = 1;
+    optional string h5Authtoken = 2;
+}
+
+message TransferJsApiHeader {
+    optional string key = 1;
+    optional string value = 2;
+}
+
+message JsApiResponse {
+    optional int32 ret = 1;
+    optional string errorMsg = 2;
+    optional string respJson = 3;
+    repeated TransferJsApiHeader header = 4;
+}
+
+message JsApiRequest {
+    optional string url = 1;
+    optional string reqJson = 2;
+    optional uint32 cgiCmdid = 3;
+    repeated TransferJsApiHeader header = 4;
+    optional uint32 method = 5;
+}
+
+message H5ExtTransferRequest {
+    required BaseRequest baseRequest = 1;
+    optional JsApiRequest jsApiRequest = 2;
+    optional string h5Authtoken = 3;
+    optional SKBuiltinBuffer_t clientCheckData = 4;
+    optional string h5Url = 5;
+    optional uint32 jsApiControlBytesIndex = 6;
+    optional string scope = 7;
+}
+
+message H5ExtTransferResponse {
+    optional BaseResponse baseResponse = 1;
+    optional JsApiResponse jsApiResponse = 2;
+}

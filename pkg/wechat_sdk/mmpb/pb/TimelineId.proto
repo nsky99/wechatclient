@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+message TimelineId {
+    optional uint64 max_id = 4;
+}
+
+message TimelineInfo {
+    optional TimelineId timelineId = 2;
+}

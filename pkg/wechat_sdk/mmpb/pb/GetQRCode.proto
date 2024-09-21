@@ -1,0 +1,21 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message GetQRCodeRequest {
+    required BaseRequest baseRequest = 1;
+    required SKBuiltinString_t userName = 2;
+    required uint32 style = 3;
+    optional uint32 opCode = 4;
+}
+
+message GetQRCodeResponse {
+    required BaseResponse baseResponse = 1;
+    required SKBuiltinBuffer_t qrcode = 2;
+    required uint32 style = 5;
+    optional string footerWording = 6;
+    optional string revokeQrcodeId = 7;
+    optional string revokeQrcodeWording = 8;
+}

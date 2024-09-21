@@ -1,0 +1,25 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+import "MicroSnsBase.proto";
+
+message SnsClassifyTimeLineRequest {
+    required BaseRequest baseRequest = 1;
+    optional string firstPageMd5 = 2;
+    required uint64 maxId = 3;
+    optional string classifyId = 4;
+    required uint32 classifyType = 5;
+}
+
+message SnsClassifyTimeLineResponse {
+    required BaseResponse baseResponse = 1;
+    optional string firstPageMd5 = 2;
+    required uint32 objectCount = 3;
+    repeated SnsObject objectList = 4;
+    required uint32 objectCountForSameMd5 = 5;
+    optional string description = 6;
+    required uint32 controlFlag = 7;
+    required SnsServerConfig serverConfig = 8;
+}

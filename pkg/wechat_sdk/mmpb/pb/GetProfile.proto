@@ -1,0 +1,18 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+import "ModUserInfo.proto";
+import "UserInfoExt.proto";
+
+message GetProfileRequest {
+    required BaseRequest baseRequest = 1;
+    optional string userName = 2;
+}
+
+message GetProfileResponse {
+    required BaseResponse BaseResponse = 1;
+    required ModUserInfo userInfo = 2;
+    required UserInfoExt userInfoExt = 3;
+}

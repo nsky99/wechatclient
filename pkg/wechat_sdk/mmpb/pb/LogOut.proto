@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message LogOutRequest {
+    required BaseRequest baseRequest = 1;
+    optional uint32 scene = 2;
+}
+
+message LogOutResponse {
+    required BaseResponse baseResponse = 1;
+}

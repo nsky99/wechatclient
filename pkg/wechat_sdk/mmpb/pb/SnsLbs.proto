@@ -1,0 +1,24 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+import "MicroSnsBase.proto";
+
+message SnsLbsRequest {
+    required BaseRequest baseRequest = 1;
+    required uint32 opCode = 2;
+    required float longitude = 3;
+    required float latitude = 4;
+    required int32 precision = 5;
+    optional string macAddr = 6;
+    optional string cellId = 7;
+    required int32 gpsSource = 8;
+    required uint32 sbTime = 9;
+}
+
+message SnsLbsResponse {
+    required BaseResponse baseResponse = 1;
+    required uint32 contactCount = 2;
+    repeated SnsLbsContactInfo contactList = 3;
+}

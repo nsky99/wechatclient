@@ -1,0 +1,23 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message SnsGetCityRequest {
+    required BaseRequest baseRequest = 1;
+    required int32 longitude = 3;
+    required int32 latitude = 4;
+    required int32 precision = 5;
+    optional string macAddr = 6;
+    optional string cellId = 7;
+    required int32 gpsSource = 8;
+}
+
+message SnsGetCityResponse {
+    required BaseResponse baseResponse = 1;
+    required int32 longitude = 2;
+    required int32 latitude = 3;
+    optional string country = 4;
+    optional string city = 5;
+}

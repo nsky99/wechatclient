@@ -1,0 +1,18 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message GetChatRoomInfoDetailRequest {
+    required BaseRequest baseRequest = 1;
+    optional string chatRoomName = 2;
+}
+
+message GetChatRoomInfoDetailResponse {
+    required BaseResponse baseResponse = 1;
+    optional string announcement = 2;
+    optional uint32 chatRoomInfoVersion = 3;
+    optional string announcementEditor = 4;
+    optional uint32 announcementPublishTime = 5;
+}

@@ -1,0 +1,20 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message HeartBeatRequest {
+    required BaseRequest baseRequest = 1;
+    required uint32 timeStamp = 2;
+    optional SKBuiltinBuffer_t keyBuf = 3;
+    optional SKBuiltinBuffer_t blueToothBroadCastContent = 4;
+    optional uint32 scene = 5;
+}
+
+message HeartBeatResponse {
+    required BaseResponse baseResponse = 1;
+    required uint32 nextTime = 2;
+    optional uint32 selector = 3;
+    optional SKBuiltinBuffer_t blueToothBroadCastContent = 4;
+}

@@ -1,0 +1,69 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message DisturbTimeSpan {
+    required uint32 beginTime = 1;
+    required uint32 endTime = 2;
+}
+
+message DisturbSetting {
+    required uint32 nightSetting = 1;
+    required DisturbTimeSpan mightTime = 2;
+    required uint32 allDaySetting = 3;
+    required DisturbTimeSpan allDayTime = 4;
+}
+
+message GmailInfo {
+    optional string gmailAcct = 1;
+    required uint32 gmailSwitch = 2;
+    required uint32 gmailErrCode = 3;
+}
+
+message GmailList {
+    required uint32 count = 1;
+    repeated GmailInfo list = 2;
+}
+
+message ModUserInfo {
+    required uint32 bitFlag = 1;
+    required SKBuiltinString_t userName = 2;
+    required SKBuiltinString_t nickName = 3;
+    required uint32 bindUin = 4;
+    required SKBuiltinString_t bindEmail = 5;
+    required SKBuiltinString_t bindMobile = 6;
+    required uint32 status = 7;
+    required uint32 imgLen = 8;
+    optional bytes imgBuf = 9;
+    optional int32 sex = 10;
+    optional string province = 11;
+    optional string city = 12;
+    optional string signature = 13;
+    optional uint32 personalCard = 14;
+    optional DisturbSetting disturbSetting = 15;
+    optional uint32 pluginFlag = 16;
+    optional uint32 verifyFlag = 17;
+    optional string verifyInfo = 18;
+    optional int32 point = 19;
+    optional int32 experience = 20;
+    optional int32 level = 21;
+    optional int32 levelLowExp = 22;
+    optional int32 levelHighExp = 23;
+    optional string weibo = 24;
+    optional uint32 pluginSwitch = 25;
+    optional GmailList gmailList = 26;
+    optional string alias = 27;
+    optional string weiboNickname = 28;
+    optional uint32 weiboFlag = 29;
+    optional uint32 faceBookFlag = 30;
+    optional uint64 fbUserId = 31;
+    optional string fbUserName = 32;
+    optional int32 albumStyle = 33;
+    optional int32 albumFlag = 34;
+    optional string albumBgImgId = 35;
+    optional uint32 txNewsCategory = 36;
+    optional string fbToken = 37;
+    optional string country = 38;
+}

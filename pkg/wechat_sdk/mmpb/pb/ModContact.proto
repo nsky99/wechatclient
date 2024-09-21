@@ -1,0 +1,129 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+import "ModUserInfo.proto";
+
+message ModContact {
+    required SKBuiltinString_t userName = 1;
+    required SKBuiltinString_t nickName = 2;
+    required SKBuiltinString_t pyInitial = 3;
+    required SKBuiltinString_t quanPin = 4;
+    required int32 sex = 5;
+    required SKBuiltinBuffer_t imgBuf = 6;
+    required uint32 bitMask = 7;
+    required uint32 bitVal = 8;
+    required uint32 imgFlag = 9;
+    optional SKBuiltinString_t remark = 10;
+    optional SKBuiltinString_t remarkPYInitial = 11;
+    optional SKBuiltinString_t remarkQuanPin = 12;
+    optional uint32 contactType = 13;
+    optional uint32 roomInfoCount = 14;
+    repeated RoomInfo roomInfoList = 15;
+    optional SKBuiltinString_t domainList = 16;
+    optional uint32 chatRoomNotify = 17;
+    optional uint32 addContactScene = 18;
+    optional string province = 19;
+    optional string city = 20;
+    optional string signature = 21;
+    optional uint32 personalCard = 22;
+    optional uint32 hasWeiXinHdHeadImg = 23;
+    optional uint32 verifyFlag = 24;
+    optional string verifyInfo = 25;
+    optional int32 level = 26;
+    optional uint32 source = 27;
+    optional string weibo = 28;
+    optional string verifyContent = 29;
+    optional string alias = 30;
+    optional string chatRoomOwner = 31;
+    optional string weiboNickname = 32;
+    optional uint32 weiboFlag = 33;
+    optional int32 albumStyle = 34;
+    optional int32 albumFlag = 35;
+    optional string albumBgImgId = 36;
+    optional SnsUserInfo snsUserInfo = 37;
+    optional string country = 38;
+    optional string bigHeadImgUrl = 39;
+    optional string smallHeadImgUrl = 40;
+    optional string myBrandList = 41;
+    optional CustomizedInfo customizedInfo = 42;
+    optional string chatRoomData = 43;
+    optional string headImgMd5 = 44;
+    optional string encryptUserName = 45;
+    optional string idcardNum = 46;
+    optional string realName = 47;
+    optional string mobileHash = 48;
+    optional string mobileFullHash = 49;
+    optional AdditionalContactList additionalContactList = 50;
+    optional uint32 chatroomVersion = 53;
+    optional string extInfo = 54;
+    optional uint32 chatroomMaxCount = 55;
+    optional uint32 chatroomType = 56;
+    optional ChatRoomMemberData newChatroomData = 57;
+    optional int32 deleteFlag = 58;
+    optional string description = 59;
+    optional string cardImgUrl = 60;
+    optional string labelIdList = 61;
+    optional PhoneNumListInfo phoneNumListInfo = 62;
+    optional string weiDianInfo = 63;
+    optional uint32 chatroomInfoVersion = 64;
+}
+
+message DelContact {
+    required SKBuiltinString_t userName = 1;
+}
+
+message DelChatContact {
+    required SKBuiltinString_t userName = 1;
+}
+
+message ModNotifyStatus {
+    required SKBuiltinString_t userName = 1;
+    required uint32 Status = 2;
+}
+
+message ModMicroBlogInfo {
+    required SKBuiltinString_t userName = 1;
+    required uint32 microBlogType = 2;
+    required uint32 notifyStatus = 3;
+    required uint32 deleteFlag = 4;
+}
+
+message ModDisturbSetting {
+    required DisturbSetting disturbSetting = 1;
+}
+
+message InviteFriendOpen {
+    optional string userName = 1;
+    required uint32 friendType = 2;
+}
+
+message ModUserDomainEmail {
+    required uint32 status = 1;
+    required SKBuiltinString_t email = 2;
+}
+
+message DelUserDomainEmail {
+    required SKBuiltinString_t userName = 1;
+    required SKBuiltinString_t email = 2;
+}
+
+message ModDescription {
+    optional string contactUsername = 1;
+    optional string desc = 2;
+}
+
+message ModUserImg {
+    required uint32 imgType = 1;
+    required uint32 imgLen = 2;
+    optional bytes imgBuf = 3;
+    optional string imgMd5 = 4;
+    optional string bigHeadImgUrl = 5;
+    optional string smallHeadImgUrl = 6;
+}
+
+message ModUserInfoItem {
+    optional uint32 type = 1;
+    optional string content = 2;
+}

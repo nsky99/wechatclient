@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+import "MicroSnsBase.proto";
+
+message SnsTimeLineWithTypeRequest {
+    required BaseRequest baseRequest = 1;
+    optional uint64 selectType = 2;
+}
+
+message SnsTimeLineWithTypeResponse {
+    required BaseResponse baseResponse = 1;
+    required uint32 objectCount = 2;
+    repeated SnsObject objectList = 3;
+}

@@ -1,0 +1,41 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message PatternLockInfo {
+    optional uint32 patternVersion = 1;
+    optional SKBuiltinBuffer_t sign = 2;
+    optional uint32 lockStatus = 3;
+}
+
+message UserInfoExt {
+    required SnsUserInfo snsUserInfo = 1;
+    optional string myBrandList = 2;
+    optional string msgPushSound = 3;
+    optional string voipPushSound = 4;
+    optional uint32 bigChatRoomSize = 5;
+    optional uint32 bigChatRoomQuota = 6;
+    optional uint32 bigChatRoomInvite = 7;
+    optional string safeMobile = 8;
+    optional string bigHeadImgUrl = 9;
+    optional string smallHeadImgUrl = 10;
+    optional uint32 mainAcctType = 11;
+    optional SKBuiltinString_t extXml = 12;
+    optional SafeDeviceList safeDeviceList = 13;
+    optional uint32 safeDevice = 14;
+    optional uint32 grayscaleFlag = 15;
+    optional string googleContactName = 16;
+    optional string idcardNum = 17;
+    optional string realName = 18;
+    optional string regCountry = 19;
+    optional string bbppId = 20;
+    optional string bbPin = 21;
+    optional string bbmNickName = 22;
+    optional LinkedinContactItem linkedinContactItem = 23;
+    optional string kfInfo = 24;
+    optional PatternLockInfo patternLockInfo = 25;
+    optional string securityDeviceId = 26;
+    optional uint32 payWalletType = 27;
+}

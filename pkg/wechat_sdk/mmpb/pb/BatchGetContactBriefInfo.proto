@@ -1,0 +1,21 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+import "ModContact.proto";
+
+message ContactBriefInfo {
+    optional string username = 1;
+    optional int32 ret = 2;
+    optional ModContact contact = 3;
+}
+
+message BatchGetContactBriefInfoReq {
+    repeated string userNameList = 1;
+}
+
+message BatchGetContactBriefInfoResp {
+    required BaseResponse baseResponse = 1;
+    repeated ContactBriefInfo contactList = 2;
+}

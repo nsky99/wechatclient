@@ -1,0 +1,161 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message WTLoginImgReqInfo {
+    optional string imgSid = 1;
+    optional string imgCode = 2;
+    optional string imgEncryptKey = 3;
+    required SKBuiltinBuffer_t kSid = 4;
+}
+
+message WTLoginImgRespInfo {
+    optional string imgEncryptKey = 1;
+    required SKBuiltinBuffer_t kSid = 2;
+    optional string imgSid = 3;
+    required SKBuiltinBuffer_t imgBuf = 4;
+}
+
+message WxVerifyCodeReqInfo {
+    optional string verifySignature = 1;
+    optional string verifyContent = 2;
+}
+
+message WxVerifyCodeRespInfo {
+    optional string verifySignature = 1;
+    required SKBuiltinBuffer_t verifyBuff = 2;
+}
+
+message BaseAuthReqInfo {
+    optional SKBuiltinBuffer_t wtLoginReqBuff = 1;
+    optional WTLoginImgReqInfo wtLoginImgReqInfo = 2;
+    optional WxVerifyCodeReqInfo wxVerifyCodeReqInfo = 3;
+    optional SKBuiltinBuffer_t cliDBEncryptKey = 4;
+    optional SKBuiltinBuffer_t cliDBEncryptInfo = 5;
+    optional uint32 authReqFlag = 6;
+    optional string authTicket = 7;
+}
+
+message ManualAuthRsaReqData {
+    required SKBuiltinBuffer_t randomEncryKey = 1;
+    required ECDHKey cliPubECDHKey = 2;
+    optional string username = 3;
+    optional string pwd = 4;
+    optional string pwd2 = 5;
+}
+
+message ManualAuthAesReqData {
+    required BaseRequest baseRequest = 1;
+    optional BaseAuthReqInfo baseReqInfo = 2;
+    optional string imei = 3;
+    optional string softType = 4;
+    required uint32 builtinIPSeq = 5;
+    optional string clientSeqID = 6;
+    optional string signature = 7;
+    optional string deviceName = 8;
+    optional string deviceType = 9;
+    optional string language = 10;
+    optional string timezone = 11;
+    optional int32 channel = 13;
+    optional uint32 timestamp = 14;
+    optional string deviceBrand = 15;
+    optional string deviceModel = 16;
+    optional string osType = 17;
+    optional string realCountry = 18;
+    optional string bundleID = 19;
+    optional string adSource = 20;
+    optional string iPhoneVer = 21;
+    required uint32 inputType = 22;
+    optional SKBuiltinBuffer_t clientCheckDat = 23;
+}
+
+message ManualAuthRequest {
+    required ManualAuthRsaReqData rsaReqData = 1;
+    required ManualAuthAesReqData aesReqData = 2;
+}
+
+message AutoAuthRsaReqData {
+    required SKBuiltinBuffer_t aesEncryptKey = 2;
+    optional ECDHKey cliPubEcdhkey = 3;
+}
+
+message AutoAuthKey {
+    required SKBuiltinBuffer_t encryptKey = 1;
+    required SKBuiltinBuffer_t key = 2;
+}
+
+message AutoAuthAesReqData {
+    required BaseRequest baseRequest = 1;
+    optional BaseAuthReqInfo baseReqInfo = 2;
+    required SKBuiltinBuffer_t autoAuthKey = 3;
+    optional string imei = 4;
+    optional string softType = 5;
+    required uint32 builtinIpSeq = 6;
+    optional string clientSeqId = 7;
+    optional string signature = 8;
+    optional string deviceName = 9;
+    optional string deviceType = 10;
+    optional string language = 11;
+    optional string timeZone = 12;
+}
+
+message AutoAuthRequest {
+    required AutoAuthRsaReqData rsaReqData = 1;
+    required AutoAuthAesReqData aesReqData = 2;
+}
+
+message AuthSectResp {
+    required uint32 uin = 1;
+    required ECDHKey svrPubECDHKey = 2;
+    required SKBuiltinBuffer_t sessionKey = 3;
+    required SKBuiltinBuffer_t autoAuthKey = 4;
+    required uint32 wtLoginRspBuffFlag = 5;
+    optional SKBuiltinBuffer_t wtLoginRspBuff = 6;
+    optional WTLoginImgRespInfo wtLoginImgRespInfo = 7;
+    optional WxVerifyCodeRespInfo wxVerifyCodeRespInfo = 8;
+    optional SKBuiltinBuffer_t cliDBEncryptKey = 9;
+    optional SKBuiltinBuffer_t cliDBEncryptInfo = 10;
+    optional string authKey = 11;
+    optional SKBuiltinBuffer_t a2Key = 12;
+    optional string applyBetaUrl = 14;
+    optional ShowStyleKey showStyle = 15;
+    optional string authTicket = 16;
+    optional uint32 newVersion = 17;
+    optional uint32 updateFlag = 18;
+    optional uint32 authResultFlag = 19;
+    optional string fsUrl = 20;
+}
+
+message AcctSectResp {
+    optional string username = 1;
+    optional string nickname = 2;
+    required uint32 bindUin = 3;
+    optional string bindEmail = 4;
+    optional string bindMobile = 5;
+    optional string alias = 6;
+    required uint32 status = 8;
+    optional uint32 pluginFlag = 9;
+    optional uint32 regType = 10;
+    optional string deviceInfoXml = 11;
+    optional uint32 safeDevice = 12;
+    optional string officialUserName = 13;
+    optional string officialNickName = 14;
+    optional uint32 pushMailStatus = 15;
+    optional string fsUrl = 16;
+}
+
+message NetworkSectResp {
+    optional HostList newHostList = 1;
+    optional NetworkControl networkControl = 2;
+    optional BuiltinIPList builtinIPList = 3;
+}
+
+message UnifyAuthResponse {
+    required BaseResponse baseResponse = 1; // 请求的响应
+    optional uint32 unifyAuthSectFlag = 2;  // 统一身份验证安全标志
+    optional AuthSectResp authSectResp = 3; // 认证安全响应
+    optional AcctSectResp acctSectResp = 4; // 账号安全响应
+    optional NetworkSectResp networkSectResp = 5;// 网络安全响应
+}

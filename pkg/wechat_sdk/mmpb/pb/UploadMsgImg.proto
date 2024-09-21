@@ -1,0 +1,53 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message UploadMsgImgRequest {
+    required BaseRequest baseRequest = 1;
+    required SKBuiltinString_t clientImgId = 2;
+    required SKBuiltinString_t fromUserName = 3;
+    required SKBuiltinString_t toUserName = 4;
+    required uint32 totalLen = 5;
+    required uint32 startPos = 6;
+    required uint32 dataLen = 7;
+    required SKBuiltinBuffer_t data = 8;
+    optional uint32 msgType = 9;
+    optional string msgSource = 10;
+    optional uint32 compressType = 11;
+    optional int32 netType = 12;
+    optional int32 photoFrom = 13;
+    optional string mediaId = 14;
+    optional string cdnBigImgUrl = 15;
+    optional string cdnMidImgUrl = 16;
+    optional string aesKey = 17;
+    optional int32 encryVer = 18;
+    optional int32 cdnBigImgSize = 19;
+    optional int32 cdnMidImgSize = 20;
+    optional string cdnThumbImgUrl = 21;
+    optional int32 cdnThumbImgSize = 22;
+    optional int32 cdnThumbImgHeight = 23;
+    optional int32 cdnThumbImgWidth = 24;
+    optional string cdnThumbAesKey = 25;
+    optional uint32 qeqTime = 26;
+    optional string md5 = 27;
+    optional uint32 crc32 = 28;
+    optional uint32 msgForwardType = 29;
+    optional uint32 hitMd5 = 30;
+}
+
+message UploadMsgImgResponse {
+    required BaseResponse baseResponse = 1;
+    required uint32 msgId = 2;
+    required SKBuiltinString_t clientImgId = 3;
+    required SKBuiltinString_t fromUserName = 4;
+    required SKBuiltinString_t toUserName = 5;
+    required uint32 totalLen = 6;
+    required uint32 startPos = 7;
+    required uint32 dataLen = 8;
+    required uint32 createTime = 9;
+    optional uint64 newMsgId = 10;
+    optional string aesKey = 11;
+    optional string fileId = 12;
+}

@@ -1,0 +1,28 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+import "MicroRoomBase.proto";
+
+message CreateChatRoomRequest {
+    required BaseRequest baseRequest = 1;
+    required SKBuiltinString_t topic = 2;
+    required uint32 memberCount = 3;
+    repeated MemberReq memberList = 4;
+    optional uint32 scene = 5;
+    optional SKBuiltinBuffer_t extBuffer = 6;
+}
+
+message CreateChatRoomResponse {
+    required BaseResponse baseResponse = 1;
+    required SKBuiltinString_t topic = 2;
+    required SKBuiltinString_t pyInitial = 3;
+    required SKBuiltinString_t quanPin = 4;
+    required uint32 memberCount = 5;
+    repeated MemberResp memberList = 6;
+    required SKBuiltinString_t chatRoomName = 7;
+    required SKBuiltinBuffer_t imgBuf = 8;
+    optional string bigHeadImgUrl = 9;
+    optional string smallHeadImgUrl = 10;
+}

@@ -1,0 +1,153 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message RecommendFeedsContext {
+    optional string referer = 1;
+    optional string actionBuffer = 2;
+}
+
+message GetRecommendFeedsReq {
+    optional BaseRequest baseRequest = 1;
+    optional uint32 scene = 2;
+    optional bytes buffer = 3;
+    optional RecommendFeedsContext context = 4;
+}
+
+message RecommendFeedsFeedbackReq_RecommendCardLite {
+    optional string extraData = 1;
+    optional uint64 clientMsgId = 2;
+    repeated string negativeFeedbackReason = 3;
+}
+
+message RecommendFeedsFeedbackReq {
+    optional BaseRequest baseRequest = 1;
+    repeated RecommendFeedsFeedbackReq_RecommendCardLite recommendCard = 2;
+    optional uint32 sessionId = 3;
+}
+
+message GetRecommendFeedsResp_RecommendFeedsConfig {
+    optional uint32 nextReqTime = 1;
+    optional uint32 protectionTime = 2;
+    optional uint32 subscribeMsgLimit = 3;
+}
+
+message GetRecommendFeedsResp_RecommendCardMsg_RecommendItemMsg_ItemMsg_PictureMsg {
+    optional uint32 picNum = 1;
+    repeated string pictureUrl = 2;
+}
+
+message GetRecommendFeedsResp_RecommendCardMsg_RecommendItemMsg_ItemMsg_VoiceMsg {
+    optional string voicePlayUrl = 1;
+    optional uint32 voiceDuration = 2;
+}
+
+message GetRecommendFeedsResp_RecommendCardMsg_RecommendItemMsg_ItemMsg_VideoMsg {
+    optional string videoId = 1;
+    optional uint32 videoWidth = 2;
+    optional uint32 videoHeight = 3;
+    optional uint32 videoDuration = 4;
+    optional string finderFeedXml = 5;
+}
+
+message GetRecommendFeedsResp_RecommendCardMsg_RecommendItemMsg_ItemMsg {
+    optional string title = 1;
+    optional string digest = 2;
+    optional string contentUrl = 3;
+    optional string coverImgUrl = 4;
+    optional string coverImgUrl11 = 5;
+    optional string coverImgUrl2351 = 6;
+    optional uint32 itemShowType = 7;
+    optional uint32 createTime = 8;
+    optional GetRecommendFeedsResp_RecommendCardMsg_RecommendItemMsg_ItemMsg_VideoMsg videoInfo = 9;
+    optional GetRecommendFeedsResp_RecommendCardMsg_RecommendItemMsg_ItemMsg_VoiceMsg voiceInfo = 10;
+    optional GetRecommendFeedsResp_RecommendCardMsg_RecommendItemMsg_ItemMsg_PictureMsg pictureInfo = 11;
+}
+
+message GetRecommendFeedsResp_RecommendCardMsg_RecommendItemMsg_BizAcctInfo {
+    optional string userName = 1;
+    optional string nickName = 2;
+    optional string brandIconUrl = 3;
+    optional string signature = 4;
+}
+
+message GetRecommendFeedsResp_RecommendCardMsg_RecommendTagMsg {
+    optional string wording = 1;
+    optional string textColor = 2;
+    optional string backgroundColor = 3;
+    optional string darkModeTextColor = 4;
+    optional string darkModeBackgroundColor = 5;
+}
+
+message GetRecommendFeedsResp_RecommendCardMsg_RecommendItemMsg {
+    optional GetRecommendFeedsResp_RecommendCardMsg_RecommendItemMsg_BizAcctInfo bizInfo = 1;
+    optional GetRecommendFeedsResp_RecommendCardMsg_RecommendItemMsg_ItemMsg itemInfo = 2;
+    optional string recInfo = 3;
+    optional string aggregationTitle = 4;
+    optional string aggregationUrl = 5;
+    optional string recommendWording = 6;
+    optional uint32 styleFlag = 7;
+    optional GetRecommendFeedsResp_RecommendCardMsg_RecommendTagMsg recommendTag = 8;
+    optional uint32 iconType = 9;
+    optional string canvasBuffer = 10;
+}
+
+message GetRecommendFeedsResp_RecommendCardMsg {
+    optional string extraData = 1;
+    repeated GetRecommendFeedsResp_RecommendCardMsg_RecommendItemMsg recommendItem = 2;
+    optional uint32 style = 3;
+    optional uint32 styleFlag = 4;
+    optional string cardId = 5;
+    repeated string negativeFeedbackReason = 6;
+    optional string aggregationTitle = 7;
+    optional string aggregationUrl = 8;
+    optional string recommendWording = 9;
+    optional GetRecommendFeedsResp_RecommendCardMsg_RecommendTagMsg recommendTag = 10;
+    optional uint32 iconType = 11;
+    repeated string friendSeenHeadImgUrl = 12;
+    optional string canvasBuffer = 13;
+    optional uint32 separateStyle = 14;
+}
+
+message GetRecommendFeedsResp {
+    required BaseResponse baseResponse = 1;
+    repeated GetRecommendFeedsResp_RecommendCardMsg recommendCard = 2;
+    optional GetRecommendFeedsResp_RecommendFeedsConfig config = 3;
+    optional string recommendFeedsWording = 4;
+    optional bytes buffer = 5;
+}
+
+message PrepareWecoinRechargeRequest {
+    required BaseRequest baseRequest = 1;
+    optional string requestId = 2;
+    optional string rechargeProductId = 3;
+    optional uint32 agreementVersion = 4;
+    optional uint32 scene = 100;
+    optional string reportSessionId = 101;
+}
+
+message PopUpJumpInfo {
+    optional string wording = 1;
+    optional uint32 action = 2;
+    optional string url = 3;
+    optional string username = 4;
+    optional string pagepath = 5;
+}
+
+message InterceptPopUp {
+    optional string wording = 1;
+    optional PopUpJumpInfo leftButton = 2;
+    optional PopUpJumpInfo rightButton = 3;
+    optional uint32 popUpType = 4;
+}
+
+message PrepareWecoinRechargeResponse {
+    required BaseResponse baseResponse = 1;
+    optional MidasSdkInfo sdkInfo = 2;
+    optional string billNo = 3;
+    optional string urlParams = 4;
+    optional string saveValue = 5;
+    optional InterceptPopUp interceptInfo = 100;
+}

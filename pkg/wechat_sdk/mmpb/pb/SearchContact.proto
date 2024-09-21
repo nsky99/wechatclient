@@ -1,0 +1,79 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message SearchContactRequest {
+    required BaseRequest baseRequest = 1;
+    required SKBuiltinString_t userName = 2;
+    optional uint32 opCode = 3;
+    optional SKBuiltinBuffer_t reqBuf = 4;
+    optional uint32 fromScene = 5;
+    optional uint32 searchScene = 6;
+}
+
+message SearchContactItem {
+    required SKBuiltinString_t userName = 1;
+    required SKBuiltinString_t nickName = 2;
+    required SKBuiltinString_t pyinitial = 3;
+    required SKBuiltinString_t quanPin = 4;
+    required int32 sex = 5;
+    required SKBuiltinBuffer_t imgBuf = 6;
+    optional string province = 7;
+    optional string city = 8;
+    optional string signature = 9;
+    optional uint32 personalCard = 10;
+    optional uint32 verifyFlag = 11;
+    optional string verifyInfo = 12;
+    optional string weibo = 13;
+    optional string alias = 14;
+    optional string weiboNickname = 15;
+    optional uint32 weiboFlag = 16;
+    optional int32 albumStyle = 17;
+    optional int32 albumFlag = 18;
+    optional string albumBgImgId = 19;
+    optional SnsUserInfo snsUserInfo = 20;
+    optional string country = 21;
+    optional string myBrandList = 22;
+    optional CustomizedInfo customizedInfo = 23;
+    optional string bigHeadImgUrl = 24;
+    optional string smallHeadImgUrl = 25;
+    optional string antispamTicket = 26;
+    optional uint32 matchType = 27;
+}
+
+message SearchContactResponse {
+    required BaseResponse baseResponse = 1;
+    required SKBuiltinString_t userName = 2;
+    required SKBuiltinString_t nickName = 3;
+    required SKBuiltinString_t pyInitial = 4;
+    required SKBuiltinString_t quanPin = 5;
+    required int32 sex = 6;
+    required SKBuiltinBuffer_t imgBuf = 7;
+    optional string province = 8;
+    optional string city = 9;
+    optional string signature = 10;
+    optional uint32 personalCard = 11;
+    optional uint32 verifyFlag = 12;
+    optional string verifyInfo = 13;
+    optional string weibo = 14;
+    optional string alias = 15;
+    optional string weiboNickname = 16;
+    optional uint32 weiboFlag = 17;
+    optional int32 albumStyle = 18;
+    optional int32 albumFlag = 19;
+    optional string albumBgImgId = 20;
+    optional SnsUserInfo snsUserInfo = 21;
+    optional string country = 22;
+    optional string myBrandList = 23;
+    optional CustomizedInfo customizedInfo = 24;
+    optional uint32 contactCount = 25;
+    repeated SearchContactItem contactList = 26;
+    optional string bigHeadImgUrl = 27;
+    optional string smallHeadImgUrl = 28;
+    optional SKBuiltinBuffer_t resBuf = 29;
+    optional string antispamTicket = 30;
+    optional string kfWorkerId = 31;
+    optional uint32 matchType = 32;
+}

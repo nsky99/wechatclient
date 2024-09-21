@@ -1,0 +1,19 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message OplogRet {
+    required uint32 count = 1;
+    repeated int32 ret = 2 [packed = true];
+}
+
+message OplogRequest {
+    required CmdList oplog = 1;
+}
+
+message OplogResponse {
+    required int32 ret = 1;
+    required OplogRet oplogRet = 2;
+}

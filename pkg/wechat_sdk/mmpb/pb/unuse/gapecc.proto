@@ -1,0 +1,29 @@
+// syntax = "proto2";
+
+// // package wwgap;
+
+// message ClientHello {
+//     optional bytes client_pubkey = 1;
+//     optional bytes client_nonce = 2;
+//     optional uint64 authkey_version = 3;
+//     optional uint64 token = 4;
+//     optional uint32 term_info = 5;
+//     optional bytes channel = 6;
+//     optional uint32 client_version = 7;
+//     optional bytes random_key = 8;
+// }
+
+// message ServerHello {
+//     optional bytes server_pubkey = 1;
+//     optional bytes server_nonce = 2;
+//     optional bytes encrypted_signature = 3;
+// }
+
+// message WeChatData {
+//     optional string wxid = 1;
+//     optional uint32 msgtype = 2;
+//     optional bytes data = 3;
+//     optional uint32 opcode = 4;
+//     optional uint32 scene = 5;
+//     optional string trace = 6;
+// }

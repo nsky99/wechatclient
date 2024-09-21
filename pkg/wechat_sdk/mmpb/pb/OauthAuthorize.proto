@@ -1,0 +1,43 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message OauthAuthorizeReq {
+    required BaseRequest baseRequest = 1;
+    optional string oauthUrl = 2;
+    optional string bizUsername = 3;
+    optional uint32 scene = 4;
+}
+
+message OauthAuthorizeResp {
+    required BaseResponse baseResponse = 1;
+    repeated bytes scopeList = 3;
+    optional string appname = 4;
+    optional string appiconUrl = 5;
+    optional string redirectUrl = 6;
+    optional bool isRecentHasAuth = 8;
+    optional bool isSlienctAuth = 9;
+    optional bool isCallServerWhenConfirm = 10;
+    repeated AvatarInfo avatarList = 11;
+    optional bool isUseNewpage = 12;
+    optional bool isBanModifyAvatar = 13;
+    optional uint32 avatarLimit = 14;
+    optional uint32 defaultAvatarId = 15;
+    optional string defaultHeadimgUrl = 16;
+    optional string defaultHeadimgFileid = 17;
+}
+
+message OauthAuthorizeConfirmReq {
+    required BaseRequest baseRequest = 1;
+    optional string oauthUrl = 2;
+    optional uint32 opt = 3;
+    repeated string scope = 4;
+    optional uint32 avatarId = 5;
+}
+
+message OauthAuthorizeConfirmResp {
+    required BaseResponse baseResponse = 1;
+    optional string redirectUrl = 3;
+}

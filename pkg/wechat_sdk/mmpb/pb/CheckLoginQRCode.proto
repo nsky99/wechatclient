@@ -1,0 +1,37 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message LoginQRCodeNotifyPkg {
+    required SKBuiltinBuffer_t notifyData = 1;
+    required uint32 opcode = 2;
+}
+
+message CheckLoginQRCodeRequest {
+    required BaseRequest baseRequest = 1;
+    required SKBuiltinBuffer_t randomEncryKey = 2;
+    optional string uuid = 3;
+    required uint32 timestamp = 4;
+    optional uint32 opcode = 5;
+}
+
+message CheckLoginQRCodeResponse {
+    required BaseResponse baseResponse = 1;
+    optional LoginQRCodeNotifyPkg notifyPkg = 3;
+}
+
+message LoginQRCodeNotify {
+    optional string uuid = 1;
+    required uint32 status = 2;
+    optional string username = 3;
+    optional string pwd = 4;
+    optional string headImgURL = 5;
+    optional uint32 pushLoginURLExpiredTime = 6;
+    optional string nickname = 7;
+    optional uint32 expiredTime = 8;
+    optional string pairWaitTip = 9;
+    optional uint32 authorClientVersion = 10;
+    optional string authorDeviceType = 11;
+}

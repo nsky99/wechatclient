@@ -1,0 +1,32 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message DownloadAppAttachRequest {
+    required BaseRequest baseRequest = 1;
+    optional string appId = 2;
+    required uint32 sdkVersion = 3;
+    optional string mediaId = 4;
+    optional string userName = 5;
+    required uint32 totalLen = 6;
+    required uint32 startPos = 7;
+    required uint32 dataLen = 8;
+    optional string outFmt = 9;
+    optional int32 rotation = 10;
+    optional uint32 type = 11;
+    optional uint32 cdntype = 12;
+    optional uint64 newMsgId = 13;
+}
+
+message DownloadAppAttachResponse {
+    required BaseResponse baseResponse = 1;
+    optional string appId = 2;
+    optional string mediaId = 3;
+    optional string userName = 4;
+    required uint32 totalLen = 5;
+    required uint32 startPos = 6;
+    required uint32 dataLen = 7;
+    required SKBuiltinBuffer_t data = 8;
+}

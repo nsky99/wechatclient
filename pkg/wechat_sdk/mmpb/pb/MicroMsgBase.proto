@@ -1,0 +1,248 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+message SKBuiltinBuffer_t {
+    optional int32 iLen = 1;
+    optional bytes buffer = 2;
+}
+
+message SKBuiltinString_t {
+    optional string string = 1;
+}
+
+message BaseRequest {
+    optional bytes sessionKey = 1;
+    optional uint32 uin = 2;
+    optional bytes deviceId = 3;
+    optional uint32 clientVersion = 4;
+    optional bytes deviceType = 5;
+    optional uint32 scene = 6;
+}
+
+message BaseResponse {
+    optional int32 ret = 1;
+    optional SKBuiltinString_t errMsg = 2;
+}
+
+message ECDHKey {
+    required int32 nid = 1;
+    required SKBuiltinBuffer_t key = 2;
+}
+
+message StyleKeyVal {
+    required uint32 key = 1;
+    optional string val = 2;
+}
+
+message ShowStyleKey {
+    required uint32 keyCount = 1;
+    repeated StyleKeyVal key = 2;
+}
+
+message Host {
+    optional string origin = 1;
+    optional string substitute = 2;
+    optional int32 priority = 3;
+}
+
+message HostList {
+    required uint32 count = 1;
+    repeated Host list = 2;
+}
+
+message NetworkControl {
+    optional string portList = 1;
+    optional string timeoutList = 2;
+    optional uint32 minNoopInterval = 3;
+    optional uint32 maxNoopInterval = 4;
+    optional int32 typingInterval = 5;
+    optional int32 noopIntervalTime = 7;
+}
+
+message BuiltinIP {
+    required uint32 type = 1;
+    required uint32 port = 2;
+    optional bytes ip = 3;
+    optional bytes domain = 4;
+}
+
+message BuiltinIPList {
+    required uint32 longConnectIPCount = 1;
+    required uint32 shortConnectIPCount = 2;
+    required uint32 seq = 5;
+    repeated BuiltinIP longConnectIPList = 3;
+    repeated BuiltinIP shortConnectIPList = 4;
+}
+
+message CmdItem {
+    required int32 cmdId = 1;
+    required SKBuiltinBuffer_t cmdBuf = 2;
+}
+
+message CmdList {
+    required uint32 count = 1;
+    repeated CmdItem list = 2;
+}
+
+message CDNDnsPortInfo {
+    required uint32 portCount = 1;
+    repeated uint32 portList = 2 [packed = true];
+}
+
+message CDNDnsInfo {
+    required uint32 ver = 1;
+    required uint32 uin = 2;
+    required uint32 expireTime = 3;
+    required int32 frontId = 4;
+    required int32 frontIpcount = 5;
+    repeated SKBuiltinString_t frontIplist = 6;
+    optional string zoneDomain = 7;
+    required SKBuiltinBuffer_t authKey = 8;
+    required int32 zoneId = 9;
+    required int32 zoneIpcount = 10;
+    repeated SKBuiltinString_t zoneIplist = 11;
+    repeated CDNDnsPortInfo frontIpportList = 12;
+    repeated CDNDnsPortInfo zoneIpportList = 13;
+    optional int32 frontIpportCount = 14;
+    optional int32 zoneIpportCount = 15;
+    optional uint32 fakeUin = 16;
+    optional SKBuiltinBuffer_t newAuthKey = 17;
+}
+
+message RoomInfo {
+    required SKBuiltinString_t userName = 1;
+    required SKBuiltinString_t nickName = 2;
+}
+
+message SnsUserInfo {
+    required uint32 snsFlag = 1;
+    optional string snsBgImgId = 2;
+    optional uint64 snsBgObjectId = 3;
+    optional uint32 snsFlagEx = 4;
+}
+
+message CustomizedInfo {
+    required uint32 brandFlag = 1;
+    optional string externalInfo = 2;
+    optional string brandInfo = 3;
+    optional string brandIconURL = 4;
+}
+
+message LinkedinContactItem {
+    optional string linkedinName = 1;
+    optional string linkedinMemberId = 2;
+    optional string linkedinPublicUrl = 3;
+}
+
+message AdditionalContactList {
+    optional LinkedinContactItem linkedinContactItem = 1;
+}
+
+message ChatRoomMemberInfo {
+    optional string userName = 1;
+    optional string nickName = 2;
+    optional string displayName = 3;
+    optional string bigHeadImgUrl = 4;
+    optional string smallHeadImgUrl = 5;
+    required uint32 chatroomMemberFlag = 6;
+    optional string inviteBy = 7;
+}
+
+message ChatRoomMemberData {
+    required uint32 memberCount = 1;
+    repeated ChatRoomMemberInfo chatRoomMemberList = 2;
+    optional uint32 infoMask = 3;
+}
+
+message PhoneNumItem {
+    optional string phoneNum = 1;
+}
+
+message PhoneNumListInfo {
+    optional uint32 count = 1;
+    repeated PhoneNumItem phoneNumList = 2;
+}
+
+message VerifyUserValidTicket {
+    optional string username = 1;
+    optional string antispamTicket = 2;
+}
+
+message SafeDevice {
+    optional string name = 1;
+    optional string uuid = 2;
+    optional string deviceType = 3;
+    required uint32 createTime = 4;
+}
+
+message SafeDeviceList {
+    required uint32 count = 1;
+    repeated SafeDevice list = 2;
+}
+
+message WCExtInfo {
+    optional SKBuiltinBuffer_t wcstf = 1;
+    optional SKBuiltinBuffer_t wcste = 2;
+    optional SKBuiltinBuffer_t ccData = 3;
+    optional SKBuiltinBuffer_t userAttrInfo = 4;
+    optional SKBuiltinBuffer_t acgiDeviceInfo = 5;
+    optional SKBuiltinBuffer_t acgiTuring = 6;
+    optional SKBuiltinBuffer_t deviceToken = 7;
+    optional SKBuiltinBuffer_t iosturingHuman = 101;
+    optional SKBuiltinBuffer_t iosturingOwner = 102;
+}
+
+message AvatarInfo {
+    optional int32 id = 1;
+    optional string nickname = 2;
+    optional string avatarUrl = 3;
+    optional string desc = 4;
+}
+
+message AvatarInfoList {
+    repeated AvatarInfo avatarList = 1;
+    optional int32 avatarLimit = 3;
+}
+
+message WxaExternalInfo {
+    optional string hostAppId = 1;
+    optional int32 scene = 2;
+    optional int32 sourceEnv = 3;
+}
+
+message ScopeInfo {
+    optional string scope = 1;
+    optional string desc = 2;
+    optional int32 authState = 3;
+    optional string extDesc = 4;
+    optional string authDesc = 5;
+}
+
+message JsApiBaseResponse {
+    optional int32 errcode = 1;
+    optional string errmsg = 2;
+}
+
+message MidasSdkInfo {
+    optional string offerId = 1;
+    optional string openId = 2;
+    optional string openKey = 3;
+    optional string sessionId = 4;
+    optional string sessionType = 5;
+    optional string pf = 6;
+    optional string pfKey = 7;
+}
+
+message HistoryInfo {
+    optional string fileId = 1;
+    optional string aeskey = 2;
+    optional string fileMd5 = 3;
+    optional uint32 fileLength = 4;
+    optional uint32 msgCount = 5;
+    optional string newFormatFileid = 6;
+    optional string newFormatAeskey = 7;
+    optional string newFormatMd5 = 8;
+    optional uint32 newFormatFileLength = 9;
+    optional uint32 newFormatMsgCount = 10;
+}

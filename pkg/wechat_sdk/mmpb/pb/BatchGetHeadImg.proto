@@ -1,0 +1,22 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message BatchGetHeadImgRequest {
+    required BaseRequest baseRequest = 1;
+    required uint32 count = 2;
+    repeated SKBuiltinString_t userNameList = 3;
+}
+
+message ImgPair {
+    required SKBuiltinBuffer_t imgBuf = 1;
+    required SKBuiltinString_t username = 2;
+}
+
+message BatchGetHeadImgResponse {
+    required BaseResponse baseResponse = 1;
+    required uint32 count = 2;
+    repeated ImgPair imgPairList = 3;
+}

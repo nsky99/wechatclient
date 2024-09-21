@@ -1,0 +1,25 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message NewSyncRequest {
+    required CmdList oplog = 1;
+    required uint32 selector = 2;
+    required SKBuiltinBuffer_t keyBuf = 3;
+    optional uint32 scene = 4;
+    optional string deviceType = 5;
+    optional uint32 networkType = 6; // 3
+    optional uint32 syncMsgDigest = 7;// 1 short link , 0 long link
+}
+
+message NewSyncResponse {
+    required int32 ret = 1;
+    required CmdList cmdList = 2;
+    required uint32 continueFlag = 3;
+    required SKBuiltinBuffer_t keyBuf = 4;
+    optional uint32 status = 5;
+    optional uint32 onlineVersion = 6;
+    optional uint32 serverTime = 7;
+}

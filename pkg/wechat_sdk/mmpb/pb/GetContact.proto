@@ -1,0 +1,24 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+import "ModContact.proto";
+
+message GetContactRequest {
+    required BaseRequest baseRequest = 1;
+    required uint32 userCount = 2;
+    repeated SKBuiltinString_t userNameList = 3;
+    optional uint32 antispamTicketCount = 4;
+    repeated SKBuiltinString_t antispamTicketList = 5;
+    optional uint32 fromChatRoomCount = 6;
+    repeated SKBuiltinString_t fromChatRoomList = 7;
+}
+
+message GetContactResponse {
+    required BaseResponse baseResponse = 1;
+    required uint32 contactCount = 2;
+    repeated ModContact contactList = 3;
+    repeated int32 retList = 4 [packed = true];
+    repeated VerifyUserValidTicket verifyUserValidTicketList = 5;
+}

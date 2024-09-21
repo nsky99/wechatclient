@@ -1,0 +1,33 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message ModMsgStatus {
+    required int32 msgId = 1;
+    required SKBuiltinString_t fromUserName = 2;
+    required SKBuiltinString_t toUserName = 3;
+    required uint32 status = 4;
+    optional int64 newMsgId = 5;
+}
+
+message DelContactMsg {
+    required SKBuiltinString_t userName = 1;
+    required int32 maxMsgId = 2;
+    optional int64 newMsgId = 3;
+}
+
+message DelMsg {
+    required SKBuiltinString_t userName = 1;
+    required uint32 count = 2;
+    repeated int32 msgIdList = 3 [packed = true];
+}
+
+message NewDelMsg {
+    optional string fromUserName = 1;
+    optional string toUserName = 2;
+    required int32 msgId = 3;
+    required uint32 msgType = 4;
+    optional int64 newMsgId = 5;
+}

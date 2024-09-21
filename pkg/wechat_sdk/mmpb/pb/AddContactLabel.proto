@@ -1,0 +1,55 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message LabelPair {
+    optional string labelName = 1;
+    required uint32 labelId = 2;
+}
+
+message UserLabelInfo {
+    optional string userName = 1;
+    optional string labelIdlist = 2;
+}
+
+message AddContactLabelRequest {
+    optional BaseRequest baseRequest = 1;
+    optional uint32 labelCount = 2;
+    repeated LabelPair labelPairList = 3;
+}
+
+message AddContactLabelResponse {
+    optional BaseResponse BaseResponse = 1;
+    optional uint32 LabelCount = 2;
+    repeated LabelPair LabelPairList = 3;
+}
+
+message UpdateContactLabelRequest {
+    required BaseRequest baseRequest = 1;
+    required LabelPair labelPair = 2;
+}
+
+message UpdateContactLabelResponse {
+    required BaseResponse baseResponse = 1;
+}
+
+message DelContactLabelRequest {
+    required BaseRequest baseRequest = 1;
+    optional string labelIdlist = 2;
+}
+
+message DelContactLabelResponse {
+    required BaseResponse baseResponse = 1;
+}
+
+message ModifyContactLabelListRequest {
+    required BaseRequest baseRequest = 1;
+    required uint32 userCount = 2;
+    repeated UserLabelInfo userLabelInfoList = 3;
+}
+
+message ModifyContactLabelListResponse {
+    required BaseResponse baseResponse = 1;
+}

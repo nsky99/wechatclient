@@ -1,0 +1,28 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message PushLoginURLRequest {
+    required BaseRequest baseRequest = 1;
+    optional string userName = 2;
+    optional string autoAuthTicket = 3;
+    optional string clientId = 4;
+    required SKBuiltinBuffer_t randomEncryKey = 5;
+    required uint32 opcode = 6;
+    optional string deviceName = 7;
+    optional SKBuiltinBuffer_t autoAuthKey = 8;
+    optional string hardwareExtra = 9;
+    optional SKBuiltinBuffer_t msgContextPubKey = 10;
+}
+
+message PushLoginURLResponse {
+    required BaseResponse baseResponse = 1;
+    optional string uuid = 2;
+    required SKBuiltinBuffer_t notifyKey = 3;
+    required uint32 checkTime = 4;
+    required uint32 expiredTime = 5;
+    optional string blueToothBroadCastUuid = 6;
+    optional SKBuiltinBuffer_t blueToothBroadCastContent = 7;
+}

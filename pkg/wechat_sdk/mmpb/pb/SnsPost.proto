@@ -1,0 +1,43 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+import "MicroSnsBase.proto";
+
+message SnsPostRequest {
+    required BaseRequest baseRequest = 1;
+    required SKBuiltinBuffer_t objectDesc = 2;
+    optional uint32 withUserListCount = 3;
+    repeated SKBuiltinString_t withUserList = 4;
+    optional uint32 privacy = 5;
+    optional uint32 syncFlag = 6;
+    optional string clientId = 7;
+    optional uint32 postBgImgType = 8;
+    optional uint32 groupCount = 9;
+    repeated SnsGroup groupIds = 10;
+    optional uint32 objectSource = 11;
+    optional uint64 referId = 12;
+    optional uint32 blackListCount = 13;
+    repeated SKBuiltinString_t blackList = 14;
+    optional TwitterInfo twitterInfo = 15;
+    optional uint32 groupUserCount = 16;
+    repeated SKBuiltinString_t groupUser = 17;
+    optional SnsPostCtocUploadInfo ctocUploadInfo = 18;
+    optional SnsPostOperationFields snsPostOpearationFields = 19;
+    optional SnsRedEnvelops snsRedEnvelops = 20;
+    optional SKBuiltinBuffer_t poiInfo = 21;
+    optional string fromScene = 22;
+    optional CanvasInfo canvasInfo = 23;
+    optional uint32 mediaInfoCount = 24;
+    repeated MediaInfo mediaInfo = 25;
+    optional SnsWeAppInfo weAppInfo = 26;
+    optional SKBuiltinBuffer_t clientCheckData = 27;
+    optional SKBuiltinBuffer_t extSpamIinfo = 28;
+}
+
+message SnsPostResponse {
+    required BaseResponse baseResponse = 1;
+    required SnsObject snsObject = 2;
+    optional string spamTips = 3;
+}

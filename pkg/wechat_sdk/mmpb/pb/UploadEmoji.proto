@@ -1,0 +1,42 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message EmojiUploadInfoReq {
+    optional string md5 = 1;
+    required int32 startPos = 2;
+    required int32 totalLen = 3;
+    required SKBuiltinBuffer_t emojiBuffer = 4;
+    required int32 type = 5;
+    optional string toUserName = 6;
+    optional string externXml = 7;
+    optional string report = 8;
+    optional string clientMsgId = 9;
+    optional string msgSource = 10;
+    optional int32 newXmlFlag = 11;
+    optional string sendMsgTicket = 12;
+}
+
+message UploadEmojiRequest {
+    required BaseRequest baseRequest = 1;
+    required int32 emojiItemCount = 2;
+    repeated EmojiUploadInfoReq emojiItem = 3;
+}
+
+message EmojiUploadInfoResp {
+    required int32 ret = 1;
+    required int32 startPos = 2;
+    required int32 totalLen = 3;
+    optional string md5 = 4;
+    required uint32 msgId = 5;
+    optional uint64 newMsgId = 6;
+}
+
+message UploadEmojiResponse {
+    required BaseResponse baseResponse = 1;
+    required int32 emojiItemCount = 2;
+    repeated EmojiUploadInfoResp emojiItem = 3;
+    optional uint32 actionFlag = 4;
+}

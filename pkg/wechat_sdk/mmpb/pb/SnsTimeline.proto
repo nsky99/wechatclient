@@ -1,0 +1,50 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+import "MicroSnsBase.proto";
+
+message SnsTimeLineRequest {
+    required BaseRequest baseRequest = 1;
+    optional string firstPageMd5 = 2;
+    required uint64 maxId = 3;
+    optional uint64 minFilterId = 4;
+    optional uint32 lastRequestTime = 5;
+    optional uint64 clientLatestId = 6;
+    optional SKBuiltinBuffer_t session = 7;
+    optional uint32 networkType = 8;
+    optional SnsAdExpInfo adexpinfo = 10;
+    optional uint32 realFeedExposureIdsCount = 11;
+    repeated uint64 realFeedExposureIds = 12 [packed = true];
+    optional uint32 updateTimelineScene = 13;
+    optional uint32 pullType = 14;
+    optional uint64 minIdForGetPrePage = 15;
+    optional uint64 minIdForCheckUnread = 16;
+    optional uint64 nearbyFoldId = 17;
+    optional uint32 foldSectionSize = 18;
+    optional uint64 getTimeLineIdxMinId = 19;
+    optional SKBuiltinBuffer_t adPassThroughInfo = 20;
+}
+
+message SnsTimeLineResponse {
+    required BaseResponse baseResponse = 1;
+    optional string firstPageMd5 = 2;
+    required uint32 objectCount = 3;
+    repeated SnsObject objectList = 4;
+    optional uint32 newRequestTime = 5;
+    optional uint32 objectCountForSameMd5 = 6;
+    optional uint32 controlFlag = 7;
+    optional SnsServerConfig serverConfig = 8;
+    optional uint32 advertiseCount = 9;
+    repeated AdvertiseObject advertiseList = 10;
+    optional SKBuiltinBuffer_t session = 11;
+    optional uint32 recCount = 12;
+    repeated RecObject recList = 13;
+    optional uint32 delAdvertiseCount = 14;
+    repeated DelAdvertiseObject delAdvertiseList = 15;
+    optional uint32 countForCheckUnread = 16;
+    repeated uint64 idListForCheckUnread = 17 [packed = true];
+    repeated uint32 idFlagListForCheckUnread = 18 [packed = true];
+    optional SKBuiltinBuffer_t weiShangInfo = 19;
+}

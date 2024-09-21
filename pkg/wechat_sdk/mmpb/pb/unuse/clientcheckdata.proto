@@ -1,0 +1,92 @@
+// syntax = "proto2";
+
+// message ClientCheckData {
+//     required bytes version = 1;
+//     required int32 type = 2;
+//     required bytes clientcheckdata = 3;
+//     optional uint64 timestamp = 4;
+//     optional uint32 dataType = 5;
+//     optional uint32 status = 6;
+// }
+
+// message DeviceEnvHeader {
+//     optional uint32 ccdcc = 1;
+//     optional uint32 ccdts = 2;
+//     optional bytes body = 3;
+// }
+
+// message WindowsDllInfo {
+//     optional string s = 1;
+//     optional string u = 2;
+// }
+
+// message WindowsStackWalkInfo {
+//     optional uint32 index = 1;
+//     optional string info = 2;
+// }
+
+// message WindowsProcessInfo {
+//     optional uint32 pid = 1;
+//     optional uint32 parentPid = 2;
+//     optional bytes name = 3;
+// }
+
+// message WindowsHookInfo {
+//     optional uint32 offset = 1;
+//     optional string hexCode = 2;
+//     optional string dllName = 3;
+//     optional string dstDllName = 4;
+//     optional uint32 flag = 5;
+// }
+
+// message WindowsDeviceEnvBody {
+//     optional string CPUID = 1;
+//     optional string DiskSize = 2;
+//     optional string MacAddress = 3;
+//     optional string ParentName = 4;
+//     repeated WindowsDllInfo DllInfo = 5;
+//     optional uint32 DebugStatus = 6;
+//     optional uint32 DupPkg = 7;
+//     optional string SSID = 8;
+//     optional string BSSID = 9;
+//     optional string SystemName = 10;
+//     optional string AccountName = 11;
+//     optional uint32 Unknown12 = 12;
+//     optional uint32 Unknown13 = 13;
+//     optional uint32 Unknown14 = 14;
+//     optional string CeName = 15;
+//     repeated WindowsStackWalkInfo stackWalkInfo = 16;
+//     optional uint32 Unknown17 = 17;
+//     optional uint32 Unknown18 = 18;
+//     optional uint32 Unknown19 = 19;
+//     optional uint32 XorKeyHash = 20;
+//     optional uint32 Unknown21 = 21;
+//     optional bytes Unknown22 = 22;
+//     optional bytes MainProgramName = 23;
+//     repeated WindowsProcessInfo processInfo = 25;
+//     optional bytes BIOSInfo = 26;
+//     optional bytes MachineBrand = 27;
+//     optional bytes MemorySize = 28;
+//     optional bytes GraphicsCardInfo = 29;
+//     optional bytes ProgramDiskInfo = 30;
+//     optional uint64 Unknown31 = 31;
+//     optional uint32 OSInstallTime = 32;
+//     repeated WindowsHookInfo hookInfo = 33;
+//     optional uint32 UnknownTime35 = 35;
+// }
+
+// enum CCDataType {
+//     CCData_XML = 0;
+//     CCData_TEXT = 1;
+//     CCData_BINARY = 2;
+//     CCData_PB_RAW = 3;
+//     CCData_PB_ZIP = 4;
+//     CCData_PB_ZIP_WB = 5;
+//     CCData_PB_WB = 6;
+//     CCData_XML_ZIP_WB = 7;
+// }
+
+// enum CCDataStatus {
+//     CCData_SUCCESS = 0;
+//     CCData_FAIL = 1;
+// }

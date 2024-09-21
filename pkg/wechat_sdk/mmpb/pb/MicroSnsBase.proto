@@ -1,0 +1,211 @@
+syntax = "proto2";
+
+option go_package = ".;micromsg";
+
+import "MicroMsgBase.proto";
+
+message SnsHBUserInfo {
+    optional string username = 1;
+    optional uint32 createTime = 2;
+    optional SKBuiltinBuffer_t hbbuffer = 3;
+}
+
+message SnsRedEnvelops {
+    optional uint32 rewardCount = 1;
+    repeated SnsHBUserInfo rewardUserList = 2;
+    optional uint32 resourceId = 3;
+    optional uint32 reportId = 4;
+    optional uint32 reportKey = 5;
+}
+
+message SnsWeAppInfo {
+    optional string mapPoiId = 1;
+    optional uint32 appId = 2;
+    optional string userName = 3;
+    optional string redirectUrl = 4;
+    optional uint32 showType = 5;
+    optional uint32 score = 6;
+}
+
+message SnsBufferUrl {
+    optional string url = 1;
+    required uint32 type = 2;
+}
+
+message SnsCommentInfo {
+    optional string username = 1;
+    optional string nickname = 2;
+    required uint32 source = 3;
+    required uint32 type = 4;
+    optional string content = 5;
+    required uint32 createTime = 6;
+    optional int32 commentId = 7;
+    optional int32 replyCommentId = 8;
+    optional string replyUsername = 9;
+    optional uint32 isNotRichText = 10;
+    optional uint64 replyCommentId2 = 11;
+    optional uint64 commentId2 = 12;
+    optional uint32 deleteFlag = 13;
+    optional uint32 commentFlag = 14;
+}
+
+message SnsGroup {
+    required uint64 groupId = 1;
+}
+
+message PreDownloadInfo {
+    optional uint32 preDownloadPercent = 1;
+    optional uint32 preDownloadNetType = 2;
+    optional string noPreDownloadRange = 3;
+}
+
+message SnsObject {
+    required uint64 id = 1;
+    optional string username = 2;
+    optional string nickname = 3;
+    required uint32 createTime = 4;
+    required SKBuiltinBuffer_t objectDesc = 5;
+    required uint32 likeFlag = 6;
+    required uint32 likeCount = 7;
+    required uint32 likeUserListCount = 8;
+    repeated SnsCommentInfo likeUserList = 9;
+    required uint32 commentCount = 10;
+    required uint32 commentUserListCount = 11;
+    repeated SnsCommentInfo commentUserList = 12;
+    required uint32 withUserCount = 13;
+    required uint32 withUserListCount = 14;
+    repeated SnsCommentInfo withUserList = 15;
+    optional uint32 extFlag = 16;
+    optional uint32 noChange = 17;
+    optional uint32 groupCount = 18;
+    repeated SnsGroup groupList = 19;
+    optional uint32 isNotRichText = 20;
+    optional string referUsername = 21;
+    optional uint64 referId = 22;
+    optional uint32 blackListCount = 23;
+    repeated SKBuiltinString_t blackList = 24;
+    optional uint32 deleteFlag = 25;
+    optional uint32 groupUserCount = 26;
+    repeated SKBuiltinString_t groupUser = 27;
+    optional SKBuiltinBuffer_t objectOperations = 28;
+    optional SnsRedEnvelops snsRedEnvelops = 29;
+    optional PreDownloadInfo preDownloadInfo = 30;
+    optional SnsWeAppInfo weAppInfo = 31;
+}
+
+message SnsAdObject {
+    required SnsObject snsObject = 1;
+    optional SKBuiltinString_t adXml = 2;
+}
+
+message AdvertiseObject {
+    required SnsAdObject snsAdObject = 1;
+    optional SKBuiltinString_t adInfo = 2;
+}
+
+message SnsServerConfig {
+    optional int32 postMentionLimit = 1;
+    optional int32 copyAndPasteWordLimit = 2;
+}
+
+message SnsPostCtocUploadInfo {
+    required uint32 flag = 1;
+    required uint32 photoCount = 2;
+}
+
+message TwitterInfo {
+    optional string oauthToken = 1;
+    optional string oauthTokenSecret = 2;
+}
+
+message SnsAction {
+    optional string fromUsername = 1;
+    optional string toUsername = 2;
+    optional string fromNickname = 3;
+    optional string toNickname = 4;
+    required uint32 type = 5;
+    required uint32 source = 6;
+    optional uint32 createTime = 7;
+    optional string content = 8;
+    optional int32 replyCommentId = 9;
+    optional int32 commentId = 10;
+    optional uint32 isNotRichText = 11;
+    optional uint64 replyCommentId2 = 12;
+    optional uint64 commentId2 = 13;
+}
+
+message SnsActionGroup {
+    required uint64 id = 1;
+    optional uint64 parentId = 2;
+    required SnsAction currentAction = 3;
+    optional SnsAction referAction = 4;
+    optional string clientId = 5;
+    optional uint32 objectCreateTime = 6;
+}
+
+message SnsObjectOp {
+    required uint64 id = 1;
+    required uint32 opType = 2;
+    optional SKBuiltinBuffer_t ext = 3;
+}
+
+message SnsObjectOpDeleteComment {
+    required int32 CommentId = 1;
+}
+
+message SnsAdObjectOpDeleteComment {
+    required uint64 CommentId = 1;
+}
+
+message SnsLbsContactInfo {
+    optional string UserName = 1;
+}
+
+message SnsPostOperationFields {
+    optional string shareUrlOriginal = 1;
+    optional string shareUrlOpen = 2;
+    optional string jsAppid = 3;
+    optional uint32 contactTagCount = 4;
+    optional uint32 tempUserCount = 5;
+}
+
+message MediaInfo {
+    optional uint32 source = 1;
+    optional SnsMediaType mediaType = 2;
+    optional uint32 videoPlayLength = 3;
+    optional string sessionId = 4;
+    optional uint32 startTime = 5;
+}
+
+message CanvasInfo {
+    optional string dataBuffer = 1;
+}
+
+message SnsRecommendObject {
+    optional SnsObject snsObject = 1;
+    optional SKBuiltinString_t recommendXml = 2;
+}
+
+message RecObject {
+    optional SnsRecommendObject snsRecommendObject = 1;
+    optional SKBuiltinString_t recommendInfo = 2;
+}
+
+message DelAdvertiseObject {
+    optional uint64 id = 1;
+}
+
+message SnsAdExpInfo {
+    optional uint64 hateFeedid = 1;
+    optional uint32 hateTimestamp = 2;
+}
+
+enum SnsMediaType {
+    MMSNS_DATA_OK = 0;
+    MMSNS_DATA_TEXT = 1;
+    MMSNS_DATA_PHOTO = 2;
+    MMSNS_DATA_VOICE = 3;
+    MMSNS_DATA_VIDEO = 4;
+    MMSNS_DATA_MUSIC = 5;
+    MMSNS_DATA_SIGHT = 6;
+}

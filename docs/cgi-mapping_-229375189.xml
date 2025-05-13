@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8"?>
+<functionlist>
+    <change>true</change>
+    <function name="basic">
+        <domainlist connecttype="long" nettype="3" netstrategy="0" netproto="1" netchannel="1">
+            <domain idc="1">long.weixin.qq.com</domain>
+            <domain idc="1">shlong.weixin.qq.com</domain>
+            <domain idc="2">hklong.weixin.qq.com</domain>
+            <domain idc="4">calong.weixin.qq.com</domain>
+            <domain idc="3">szlong.weixin.qq.com</domain>
+            <domain idc="5">sh2tjlong.weixin.qq.com</domain>
+            <domain idc="5">sz2tjlong.weixin.qq.com</domain>
+            <domain idc="5">tjlong.weixin.qq.com</domain>
+            <domain idc="8">mllong.weixin.qq.com</domain>
+            <domain idc="9">sglong.wechat.com</domain>
+        </domainlist>
+        <domainlist connecttype="short" nettype="1" netstrategy="0" netproto="2" netchannel="1">
+            <domain idc="1">short.weixin.qq.com</domain>
+            <domain idc="1">shshort.weixin.qq.com</domain>
+            <domain idc="2">hkshort.weixin.qq.com</domain>
+            <domain idc="4">cashort.weixin.qq.com</domain>
+            <domain idc="3">szshort.weixin.qq.com</domain>
+            <domain idc="5">sh2tjshort.weixin.qq.com</domain>
+            <domain idc="5">sz2tjshort.weixin.qq.com</domain>
+            <domain idc="5">tjshort.weixin.qq.com</domain>
+            <domain idc="8">mlshort.weixin.qq.com</domain>
+            <domain idc="9">sgshort.wechat.com</domain>
+        </domainlist>
+        <domainlist connecttype="quic" nettype="1" netstrategy="0" netproto="2" netchannel="3">
+            <domain idc="1">quic.weixin.qq.com</domain>
+            <domain idc="1">shquic.weixin.qq.com</domain>
+            <domain idc="2">hkquic.weixin.qq.com</domain>
+            <domain idc="3">szquic.weixin.qq.com</domain>
+            <domain idc="8">mlquic.weixin.qq.com</domain>
+            <domain idc="9">sgquic.wechat.com</domain>
+        </domainlist>
+        <cgilist prefix="/cgi-bin/micromsg-bin/" fuzzy="0">
+            <cgi reqid="237" respid="1000000237" nettype="3" netstrategy="0" netproto="2" netchannel="1">newsendmsg</cgi>
+            <cgi reqid="32" respid="1000000032" nettype="3" netstrategy="0" netproto="2" netchannel="1">newreg</cgi>
+            <cgi reqid="2" respid="1000000002" nettype="3" netstrategy="0" netproto="2" netchannel="1">sendmsg</cgi>
+            <cgi reqid="19" respid="1000000019" nettype="3" netstrategy="0" netproto="2" netchannel="1">uploadvoice</cgi>
+            <cgi reqid="27" respid="1000000027" nettype="3" netstrategy="0" netproto="2" netchannel="1">newinit</cgi>
+            <cgi reqid="34" respid="1000000034" nettype="3" netstrategy="0" netproto="2" netchannel="1">searchcontact</cgi>
+            <cgi reqid="36" respid="1000000036" nettype="3" netstrategy="0" netproto="2" netchannel="1">addchatroommember</cgi>
+            <cgi reqid="37" respid="1000000037" nettype="3" netstrategy="0" netproto="2" netchannel="1">createchatroom</cgi>
+            <cgi reqid="44" respid="1000000044" nettype="3" netstrategy="0" netproto="2" netchannel="1">verifyuser</cgi>
+            <cgi reqid="45" respid="1000000045" nettype="3" netstrategy="0" netproto="2" netchannel="1">bindopmobile</cgi>
+            <cgi reqid="46" respid="1000000046" nettype="3" netstrategy="0" netproto="2" netchannel="1">uploadhdheadimg</cgi>
+            <cgi reqid="56" respid="1000000056" nettype="3" netstrategy="0" netproto="2" netchannel="1">shakereport</cgi>
+            <cgi reqid="57" respid="1000000057" nettype="3" netstrategy="0" netproto="2" netchannel="1">shakeget</cgi>
+            <cgi reqid="62" respid="1000000062" nettype="3" netstrategy="0" netproto="2" netchannel="1">voipsync</cgi>
+            <cgi reqid="63" respid="1000000063" nettype="3" netstrategy="0" netproto="2" netchannel="1">voipinvite</cgi>
+            <cgi reqid="64" respid="1000000064" nettype="3" netstrategy="0" netproto="2" netchannel="1">voipcancelinvite</cgi>
+            <cgi reqid="65" respid="1000000065" nettype="3" netstrategy="0" netproto="2" netchannel="1">voipanswer</cgi>
+            <cgi reqid="66" respid="1000000066" nettype="3" netstrategy="0" netproto="2" netchannel="1">voipshutdown</cgi>
+            <cgi reqid="68" respid="1000000068" nettype="3" netstrategy="0" netproto="2" netchannel="1">sendemoji</cgi>
+            <cgi reqid="84" respid="1000000084" nettype="3" netstrategy="0" netproto="2" netchannel="1">masssend</cgi>
+            <cgi reqid="94" respid="1000000094" nettype="3" netstrategy="0" netproto="2" netchannel="1">voiceaddr</cgi>
+            <cgi reqid="107" respid="1000000107" nettype="3" netstrategy="0" netproto="2" netchannel="1">sendappmsg</cgi>
+            <cgi reqid="118" respid="1000000118" nettype="3" netstrategy="0" netproto="2" netchannel="1">getprofile</cgi>
+            <cgi reqid="119" respid="1000000119" nettype="3" netstrategy="0" netproto="2" netchannel="1">voipgetroominfo</cgi>
+            <cgi reqid="121" respid="1000000121" nettype="3" netstrategy="0" netproto="2" netchannel="1">newsync</cgi>
+            <cgi reqid="123" respid="1000000123" nettype="3" netstrategy="0" netproto="2" netchannel="1">voipack</cgi>
+            <cgi reqid="125" respid="1000000125" nettype="3" netstrategy="0" netproto="2" netchannel="1">voipinviteremind</cgi>
+            <cgi reqid="127" respid="1000000127" nettype="3" netstrategy="0" netproto="2" netchannel="1">shaketranimgreport</cgi>
+            <cgi reqid="130" respid="1000000130" nettype="3" netstrategy="0" netproto="2" netchannel="1">shaketranimgunbind</cgi>
+            <cgi reqid="131" respid="1000000131" nettype="3" netstrategy="0" netproto="2" netchannel="1">checkunbind</cgi>
+            <cgi reqid="132" respid="1000000132" nettype="3" netstrategy="0" netproto="2" netchannel="1">queryhaspasswd</cgi>
+            <cgi reqid="146" respid="1000000146" nettype="3" netstrategy="0" netproto="2" netchannel="1">talkmicaction</cgi>
+            <cgi reqid="149" respid="1000000149" nettype="3" netstrategy="0" netproto="2" netchannel="1">talknoop</cgi>
+            <cgi reqid="151" respid="1000000151" nettype="3" netstrategy="0" netproto="2" netchannel="1">addsafedevice</cgi>
+            <cgi reqid="156" respid="1000000156" nettype="3" netstrategy="0" netproto="2" netchannel="1">setemailpwd</cgi>
+            <cgi reqid="158" respid="1000000158" nettype="3" netstrategy="0" netproto="2" netchannel="1">uploadinputvoice</cgi>
+            <cgi reqid="169" respid="1000000169" nettype="3" netstrategy="0" netproto="2" netchannel="1">addtalkroommember</cgi>
+            <cgi reqid="170" respid="1000000170" nettype="3" netstrategy="0" netproto="2" netchannel="1">deltalkroommember</cgi>
+            <cgi reqid="174" respid="1000000174" nettype="3" netstrategy="0" netproto="2" netchannel="1">talkinvite</cgi>
+            <cgi reqid="176" respid="1000000176" nettype="3" netstrategy="0" netproto="2" netchannel="1">clickcommand</cgi>
+            <cgi reqid="177" respid="1000000177" nettype="3" netstrategy="0" netproto="2" netchannel="1">shakemusic</cgi>
+            <cgi reqid="178" respid="1000000178" nettype="3" netstrategy="0" netproto="2" netchannel="1">newauth</cgi>
+            <cgi reqid="253" respid="1000000253" nettype="3" netstrategy="0" netproto="2" netchannel="1">manualauth</cgi>
+            <cgi reqid="254" respid="1000000254" nettype="3" netstrategy="0" netproto="2" netchannel="1">autoauth</cgi>
+            <cgi reqid="433" respid="1000000433" nettype="3" netstrategy="0" netproto="2" netchannel="1">secmanualauth</cgi>
+            <cgi reqid="434" respid="1000000434" nettype="3" netstrategy="0" netproto="2" netchannel="1">secautoauth</cgi>
+            <cgi reqid="180" respid="1000000180" nettype="3" netstrategy="0" netproto="2" netchannel="1">newsetpasswd</cgi>
+            <cgi reqid="181" respid="1000000181" nettype="3" netstrategy="0" netproto="2" netchannel="1">newsetemailpwd</cgi>
+            <cgi reqid="182" respid="1000000182" nettype="3" netstrategy="0" netproto="2" netchannel="1">newverifypasswd</cgi>
+            <cgi reqid="183" respid="1000000183" nettype="3" netstrategy="0" netproto="2" netchannel="1">joinlbsroom</cgi>
+            <cgi reqid="187" respid="1000000187" nettype="3" netstrategy="0" netproto="2" netchannel="1">paydeluserroll</cgi>
+            <cgi reqid="209" respid="1000000209" nettype="3" netstrategy="0" netproto="2" netchannel="1">mmradarsearch</cgi>
+            <cgi reqid="218" respid="1000000218" nettype="3" netstrategy="0" netproto="2" netchannel="1">kvreportrsa</cgi>
+            <cgi reqid="150" respid="1000000150" nettype="3" netstrategy="0" netproto="2" netchannel="1">opvoicereminder</cgi>
+            <cgi reqid="232" respid="1000000232" nettype="3" netstrategy="0" netproto="2" netchannel="1">getloginqrcode</cgi>
+            <cgi reqid="233" respid="1000000233" nettype="3" netstrategy="0" netproto="2" netchannel="1">checkloginqrcode</cgi>
+            <cgi reqid="247" respid="1000000247" nettype="3" netstrategy="0" netproto="2" netchannel="1">pushloginurl</cgi>
+            <cgi reqid="238" respid="1000000238" nettype="3" netstrategy="0" netproto="2" netchannel="1">heartbeat</cgi>
+            <cgi reqid="257" respid="1000000257" nettype="3" netstrategy="0" netproto="2" netchannel="1">getcrmsg</cgi>
+            <cgi reqid="845" respid="1000000845" nettype="3" netstrategy="0" netproto="2" netchannel="1">asyncbizsubscribe2016</cgi>
+            <cgi reqid="515" respid="1000000515" nettype="3" netstrategy="0" netproto="2" netchannel="1">festivalhongbao2016</cgi>
+            <cgi reqid="267" respid="1000000267" nettype="3" netstrategy="0" netproto="2" netchannel="1">getsponsorhongbao2016</cgi>
+            <cgi reqid="381" respid="1000000381" nettype="3" netstrategy="0" netproto="2" netchannel="1">voicetrans</cgi>
+            <cgi reqid="9" respid="1000000009" nettype="1" netstrategy="0" netproto="2" netchannel="1">uploadmsgimg</cgi>
+            <cgi reqid="4" respid="1000000004" nettype="1" netstrategy="0" netproto="2" netchannel="1">iphonereg</cgi>
+            <cgi reqid="39" respid="1000000039" nettype="1" netstrategy="0" netproto="2" netchannel="1">uploadvideo</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">cardsync</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getcardcount</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">sharecardsync</cgi>
+            <cgi reqid="155" respid="1000000155" nettype="3" netstrategy="1" netproto="2" netchannel="1">geta8key</cgi>
+            <cgi reqid="185" respid="1000000185" nettype="3" netstrategy="1" netproto="2" netchannel="1">tenpay</cgi>
+            <cgi reqid="345" respid="1000000345" nettype="3" netstrategy="1" netproto="2" netchannel="1">mp-geta8key</cgi>
+            <cgi reqid="387" respid="1000000387" nettype="3" netstrategy="1" netproto="2" netchannel="1">minor-geta8key</cgi>
+            <cgi reqid="388" respid="1000000388" nettype="3" netstrategy="1" netproto="2" netchannel="1">3rd-geta8key</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmbiz-bin/" fuzzy="0">
+            <cgi reqid="392" respid="1000000392" nettype="3" netstrategy="0" netproto="2" netchannel="1">js-login</cgi>
+            <cgi reqid="393" respid="1000000393" nettype="3" netstrategy="0" netproto="2" netchannel="1">js-userauth</cgi>
+            <cgi reqid="394" respid="1000000394" nettype="3" netstrategy="0" netproto="2" netchannel="1">js-usersetauth</cgi>
+            <cgi reqid="395" respid="1000000395" nettype="3" netstrategy="0" netproto="2" netchannel="1">js-refreshsession</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmbiz-bin/wxaapp/" fuzzy="0">
+            <cgi reqid="391" respid="1000000391" nettype="3" netstrategy="0" netproto="2" netchannel="1">getwxacdndownloadurl</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmbiz-bin/wxaattr/" fuzzy="0">
+            <cgi reqid="389" respid="1000000389" nettype="3" netstrategy="0" netproto="2" netchannel="1">launchwxaapp</cgi>
+            <cgi reqid="390" respid="1000000390" nettype="3" netstrategy="0" netproto="2" netchannel="1">wxaattrsync</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/" fuzzy="0">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">cpucardgetconfig2</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">offlinev2getbatchcode</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">tax_jsapipay</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/tenpay/" fuzzy="0">
+            <cgi reqid="582" respid="1000000582" nettype="1" netstrategy="0" netproto="2" netchannel="1">sns_tf_qrcodeusebindquery</cgi>
+        </cgilist>
+    </function>
+    <function name="other">
+        <domainlist connecttype="short" nettype="1" netstrategy="0" netproto="2" netchannel="1">
+            <domain idc="1">extshort.weixin.qq.com</domain>
+            <domain idc="2">hkextshort.weixin.qq.com</domain>
+            <domain idc="4">caextshort.weixin.qq.com</domain>
+            <domain idc="3">szextshort.weixin.qq.com</domain>
+            <domain idc="5">sh2tjextshort.weixin.qq.com</domain>
+            <domain idc="5">sz2tjextshort.weixin.qq.com</domain>
+            <domain idc="5">tjextshort.weixin.qq.com</domain>
+            <domain idc="8">mlextshort.weixin.qq.com</domain>
+            <domain idc="9">sgshort.wechat.com</domain>
+        </domainlist>
+        <cgilist/>
+    </function>
+    <function name="stat">
+        <domainlist connecttype="short" nettype="1" netstrategy="0" netproto="2" netchannel="1">
+            <domain idc="1">minorshort.weixin.qq.com</domain>
+            <domain idc="3">szminorshort.weixin.qq.com</domain>
+            <domain idc="5">sh2tjminorshort.weixin.qq.com</domain>
+            <domain idc="5">sz2tjminorshort.weixin.qq.com</domain>
+            <domain idc="4">caminorshort.weixin.qq.com</domain>
+            <domain idc="2">hkminorshort.weixin.qq.com</domain>
+            <domain idc="8">mlminorshort.weixin.qq.com</domain>
+            <domain idc="9">sgminorshort.wechat.com</domain>
+        </domainlist>
+        <cgilist prefix="/cgi-bin/micromsg-bin/" fuzzy="0">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">statreport</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">clientperfreport</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">useractionreport</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">reportstrategy</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">kvreport</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">gamereportkv</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">reportkvcomm</cgi>
+            <cgi reqid="218" respid="1000000218" nettype="1" netstrategy="0" netproto="2" netchannel="1">kvreportrsa</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">reportkvcommrsa</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">rtkvreport</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">newreportkvcommrsa</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">newreportkvcomm</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">reportidkey</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">reportidkeyrsa</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">newreportidkey</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">newreportidkeyrsa</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getkvidkeystrategy</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getkvidkeystrategyrsa</cgi>
+            <cgi reqid="111" respid="1000000111" nettype="1" netstrategy="0" netproto="2" netchannel="1">mmuploadmedia</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getdisasterinfo</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getapmstrategy</cgi>
+            <cgi reqid="57" respid="1000000057" nettype="1" netstrategy="0" netproto="2" netchannel="1">shakeget</cgi>
+            <cgi reqid="56" respid="1000000056" nettype="1" netstrategy="0" netproto="2" netchannel="1">shakereport</cgi>
+            <cgi reqid="177" respid="1000000177" nettype="1" netstrategy="0" netproto="2" netchannel="1">shakemusic</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">shaketv</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">reportproject8voiceinfo</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmbiz-bin/" fuzzy="0">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">qrconnect_getcode</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">qrconnect_queryuuid</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">js-operatewxdata-keepalive</cgi>
+        </cgilist>
+    </function>
+    <function name="pay">
+        <domainlist connecttype="short" nettype="1" netstrategy="0" netproto="2" netchannel="1">
+            <domain idc="1">short.pay.weixin.qq.com</domain>
+            <domain idc="1">shshort.pay.weixin.qq.com</domain>
+            <domain idc="2">hkshort.pay.weixin.qq.com</domain>
+            <domain idc="4">cashort.pay.weixin.qq.com</domain>
+            <domain idc="3">szshort.pay.weixin.qq.com</domain>
+            <domain idc="8">mlshort.pay.weixin.qq.com</domain>
+            <domain idc="9">sgshort.pay.wechat.com</domain>
+        </domainlist>
+        <cgilist prefix="/cgi-bin/micromsg-bin/" fuzzy="0">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">a2auth</cgi>
+            <cgi reqid="380" respid="1000000380" nettype="1" netstrategy="0" netproto="2" netchannel="1">offlinepayconfirm</cgi>
+            <cgi reqid="367" respid="1000000367" nettype="1" netstrategy="0" netproto="2" netchannel="1">checkpayjsapi</cgi>
+            <cgi reqid="368" respid="1000000368" nettype="1" netstrategy="0" netproto="2" netchannel="1">genprepay</cgi>
+            <cgi reqid="369" respid="1000000369" nettype="1" netstrategy="0" netproto="2" netchannel="1">payauthapp</cgi>
+            <cgi reqid="408" respid="1000000408" nettype="1" netstrategy="0" netproto="2" netchannel="1">cancelqrpay</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/" fuzzy="0">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">micropaycashier</cgi>
+            <cgi reqid="428" respid="1000000428" nettype="1" netstrategy="0" netproto="2" netchannel="1">verifyregister</cgi>
+            <cgi reqid="429" respid="1000000429" nettype="1" netstrategy="0" netproto="2" netchannel="1">verifysms</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">micropaycancel</cgi>
+            <cgi reqid="436" respid="1000000436" nettype="1" netstrategy="0" netproto="2" netchannel="1">appauthen</cgi>
+            <cgi reqid="437" respid="1000000437" nettype="1" netstrategy="0" netproto="2" netchannel="1">jsapipay</cgi>
+            <cgi reqid="438" respid="1000000438" nettype="1" netstrategy="0" netproto="2" netchannel="1">jsapiauthen</cgi>
+            <cgi reqid="439" respid="1000000439" nettype="1" netstrategy="0" netproto="2" netchannel="1">tinyapppay</cgi>
+            <cgi reqid="440" respid="1000000440" nettype="1" netstrategy="0" netproto="2" netchannel="1">tinyappauthen</cgi>
+            <cgi reqid="441" respid="1000000441" nettype="1" netstrategy="0" netproto="2" netchannel="1">h5pay</cgi>
+            <cgi reqid="442" respid="1000000442" nettype="1" netstrategy="0" netproto="2" netchannel="1">h5authen</cgi>
+            <cgi reqid="371" respid="1000000371" nettype="1" netstrategy="0" netproto="2" netchannel="1">checkpayjsapi</cgi>
+            <cgi reqid="443" respid="1000000443" nettype="1" netstrategy="0" netproto="2" netchannel="1">scanqrcodepay</cgi>
+            <cgi reqid="444" respid="1000000444" nettype="1" netstrategy="0" netproto="2" netchannel="1">scanqrcodeauthen</cgi>
+            <cgi reqid="445" respid="1000000445" nettype="1" netstrategy="0" netproto="2" netchannel="1">querycashier</cgi>
+            <cgi reqid="446" respid="1000000446" nettype="1" netstrategy="0" netproto="2" netchannel="1">elementquery</cgi>
+            <cgi reqid="447" respid="1000000447" nettype="1" netstrategy="0" netproto="2" netchannel="1">balancepaybindauthen</cgi>
+            <cgi reqid="448" respid="1000000448" nettype="1" netstrategy="0" netproto="2" netchannel="1">balancepaybindverify</cgi>
+            <cgi reqid="449" respid="1000000449" nettype="1" netstrategy="0" netproto="2" netchannel="1">minifundpaybindauthen</cgi>
+            <cgi reqid="450" respid="1000000450" nettype="1" netstrategy="0" netproto="2" netchannel="1">minifundpaybindverify</cgi>
+            <cgi reqid="451" respid="1000000451" nettype="1" netstrategy="0" netproto="2" netchannel="1">getresetbanmobileinfo</cgi>
+            <cgi reqid="452" respid="1000000452" nettype="1" netstrategy="0" netproto="2" netchannel="1">uni_apppay</cgi>
+            <cgi reqid="376" respid="1000000376" nettype="1" netstrategy="0" netproto="2" netchannel="1">offlinepayconfirm</cgi>
+            <cgi reqid="453" respid="1000000453" nettype="1" netstrategy="0" netproto="2" netchannel="1">uni_appauthen</cgi>
+            <cgi reqid="454" respid="1000000454" nettype="1" netstrategy="0" netproto="2" netchannel="1">uni_jsapipay</cgi>
+            <cgi reqid="455" respid="1000000455" nettype="1" netstrategy="0" netproto="2" netchannel="1">uni_jsapiauthen</cgi>
+            <cgi reqid="456" respid="1000000456" nettype="1" netstrategy="0" netproto="2" netchannel="1">uni_tinyapppay</cgi>
+            <cgi reqid="457" respid="1000000457" nettype="1" netstrategy="0" netproto="2" netchannel="1">uni_tinyappauthen</cgi>
+            <cgi reqid="458" respid="1000000458" nettype="1" netstrategy="0" netproto="2" netchannel="1">uni_h5pay</cgi>
+            <cgi reqid="459" respid="1000000459" nettype="1" netstrategy="0" netproto="2" netchannel="1">uni_h5authen</cgi>
+            <cgi reqid="460" respid="1000000460" nettype="1" netstrategy="0" netproto="2" netchannel="1">uni_scanqrcodepay</cgi>
+            <cgi reqid="461" respid="1000000461" nettype="1" netstrategy="0" netproto="2" netchannel="1">uni_scanqrcodeauthen</cgi>
+            <cgi reqid="462" respid="1000000462" nettype="1" netstrategy="0" netproto="2" netchannel="1">uni_querycashier</cgi>
+            <cgi reqid="372" respid="1000000372" nettype="1" netstrategy="0" netproto="2" netchannel="1">genprepay</cgi>
+            <cgi reqid="463" respid="1000000463" nettype="1" netstrategy="0" netproto="2" netchannel="1">uni_verifysms</cgi>
+            <cgi reqid="464" respid="1000000464" nettype="1" netstrategy="0" netproto="2" netchannel="1">uni_verifyregister</cgi>
+            <cgi reqid="465" respid="1000000465" nettype="1" netstrategy="0" netproto="2" netchannel="1">cancelpay</cgi>
+            <cgi reqid="466" respid="1000000466" nettype="1" netstrategy="0" netproto="2" netchannel="1">f2fplaceorder</cgi>
+            <cgi reqid="467" respid="1000000467" nettype="1" netstrategy="0" netproto="2" netchannel="1">transfersetf2ffee</cgi>
+            <cgi reqid="468" respid="1000000468" nettype="1" netstrategy="0" netproto="2" netchannel="1">transferscanqrcode</cgi>
+            <cgi reqid="469" respid="1000000469" nettype="1" netstrategy="0" netproto="2" netchannel="1">transfersendcancelf2f</cgi>
+            <cgi reqid="470" respid="1000000470" nettype="1" netstrategy="0" netproto="2" netchannel="1">transferlogin</cgi>
+            <cgi reqid="471" respid="1000000471" nettype="1" netstrategy="0" netproto="2" netchannel="1">f2fpaycheck</cgi>
+            <cgi reqid="472" respid="1000000472" nettype="1" netstrategy="0" netproto="2" netchannel="1">f2fannounce</cgi>
+            <cgi reqid="373" respid="1000000373" nettype="1" netstrategy="0" netproto="2" netchannel="1">payauthapp</cgi>
+            <cgi reqid="473" respid="1000000473" nettype="1" netstrategy="0" netproto="2" netchannel="1">f2fqrcode</cgi>
+            <cgi reqid="474" respid="1000000474" nettype="1" netstrategy="0" netproto="2" netchannel="1">f2frcvdlist</cgi>
+            <cgi reqid="475" respid="1000000475" nettype="1" netstrategy="0" netproto="2" netchannel="1">f2frmrcvdrcd</cgi>
+            <cgi reqid="476" respid="1000000476" nettype="1" netstrategy="0" netproto="2" netchannel="1">f2frcvrcdhissta</cgi>
+            <cgi reqid="477" respid="1000000477" nettype="1" netstrategy="0" netproto="2" netchannel="1">f2frcvdlistjsapicheck</cgi>
+            <cgi reqid="478" respid="1000000478" nettype="1" netstrategy="0" netproto="2" netchannel="1">getf2frcvvoice</cgi>
+            <cgi reqid="479" respid="1000000479" nettype="1" netstrategy="0" netproto="2" netchannel="1">busif2fplaceorder</cgi>
+            <cgi reqid="480" respid="1000000480" nettype="1" netstrategy="0" netproto="2" netchannel="1">busif2fpaycheck</cgi>
+            <cgi reqid="481" respid="1000000481" nettype="1" netstrategy="0" netproto="2" netchannel="1">busif2fpayok</cgi>
+            <cgi reqid="482" respid="1000000482" nettype="1" netstrategy="0" netproto="2" netchannel="1">busif2factqry</cgi>
+            <cgi reqid="432" respid="1000000432" nettype="1" netstrategy="0" netproto="2" netchannel="1">checkuserauthjsapi</cgi>
+            <cgi reqid="483" respid="1000000483" nettype="1" netstrategy="0" netproto="2" netchannel="1">busif2funlockfavor</cgi>
+            <cgi reqid="484" respid="1000000484" nettype="1" netstrategy="0" netproto="2" netchannel="1">busif2fgetfavor</cgi>
+            <cgi reqid="485" respid="1000000485" nettype="1" netstrategy="0" netproto="2" netchannel="1">f2fsucpage</cgi>
+            <cgi reqid="486" respid="1000000486" nettype="1" netstrategy="0" netproto="2" netchannel="1">busif2fsucpage</cgi>
+            <cgi reqid="487" respid="1000000487" nettype="1" netstrategy="0" netproto="2" netchannel="1">busif2fzerocallback</cgi>
+            <cgi reqid="488" respid="1000000488" nettype="1" netstrategy="0" netproto="2" netchannel="1">f2fdynamiccode</cgi>
+            <cgi reqid="495" respid="1000000495" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_ff_authen</cgi>
+            <cgi reqid="496" respid="1000000496" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_ff_verify</cgi>
+            <cgi reqid="497" respid="1000000497" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_ff_verifyreg</cgi>
+            <cgi reqid="498" respid="1000000498" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_ff_querycashier</cgi>
+            <cgi reqid="409" respid="1000000409" nettype="1" netstrategy="0" netproto="2" netchannel="1">cancelqrpay</cgi>
+            <cgi reqid="499" respid="1000000499" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_ff_cancelpay</cgi>
+            <cgi reqid="500" respid="1000000500" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_ff_banbindauthen</cgi>
+            <cgi reqid="501" respid="1000000501" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_ff_banbindverify</cgi>
+            <cgi reqid="502" respid="1000000502" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_ff_lqtbindauthen</cgi>
+            <cgi reqid="503" respid="1000000503" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_ff_lqtbindverify</cgi>
+            <cgi reqid="504" respid="1000000504" nettype="1" netstrategy="0" netproto="2" netchannel="1">appauthenretry</cgi>
+            <cgi reqid="505" respid="1000000505" nettype="1" netstrategy="0" netproto="2" netchannel="1">jsapiauthenretry</cgi>
+            <cgi reqid="506" respid="1000000506" nettype="1" netstrategy="0" netproto="2" netchannel="1">tinyappauthenretry</cgi>
+            <cgi reqid="507" respid="1000000507" nettype="1" netstrategy="0" netproto="2" netchannel="1">h5authenretry</cgi>
+            <cgi reqid="508" respid="1000000508" nettype="1" netstrategy="0" netproto="2" netchannel="1">scanqrcodeauthenretry</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">micropayauthen</cgi>
+            <cgi reqid="509" respid="1000000509" nettype="1" netstrategy="0" netproto="2" netchannel="1">uni_appauthenretry</cgi>
+            <cgi reqid="510" respid="1000000510" nettype="1" netstrategy="0" netproto="2" netchannel="1">uni_jsapiauthenretry</cgi>
+            <cgi reqid="511" respid="1000000511" nettype="1" netstrategy="0" netproto="2" netchannel="1">uni_tinyappauthenretry</cgi>
+            <cgi reqid="512" respid="1000000512" nettype="1" netstrategy="0" netproto="2" netchannel="1">uni_h5authenretry</cgi>
+            <cgi reqid="513" respid="1000000513" nettype="1" netstrategy="0" netproto="2" netchannel="1">uni_scanqrcodeauthenretry</cgi>
+            <cgi reqid="514" respid="1000000514" nettype="1" netstrategy="0" netproto="2" netchannel="1">micropayauthenretry</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">micropayquerycashier</cgi>
+            <cgi reqid="517" respid="1000000517" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_ff_authenretry</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">jointpay_cancelpay</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">inwxapppay</cgi>
+            <cgi reqid="421" respid="1000000421" nettype="1" netstrategy="0" netproto="2" netchannel="1">apppay</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">jointpay_getpublickey</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">jointpay_selectedcard</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">jointpay_authen</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">jointpay_cardlist</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">jointpay_verifysms</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">busif2fshorttermqrcode</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">busif2fgetqrcodev2</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">busif2fsaveqrcode</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/c2b/" fuzzy="1">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">*</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/f2f/" fuzzy="1">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">*</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/tenpay/" fuzzy="0">
+            <cgi reqid="363" respid="1000000363" nettype="1" netstrategy="0" netproto="2" netchannel="1">getbanpaymobileinfo</cgi>
+            <cgi reqid="377" respid="1000000377" nettype="1" netstrategy="0" netproto="2" netchannel="1">offlinequeryuser</cgi>
+            <cgi reqid="359" respid="1000000359" nettype="1" netstrategy="0" netproto="2" netchannel="1">elementquerynew</cgi>
+            <cgi reqid="430" respid="1000000430" nettype="1" netstrategy="0" netproto="2" netchannel="1">ts_verifyreg</cgi>
+            <cgi reqid="383" respid="1000000383" nettype="1" netstrategy="0" netproto="2" netchannel="1">ts_authen</cgi>
+            <cgi reqid="384" respid="1000000384" nettype="1" netstrategy="0" netproto="2" netchannel="1">ts_verify</cgi>
+            <cgi reqid="385" respid="1000000385" nettype="1" netstrategy="0" netproto="2" netchannel="1">ts_qrcodeusebindquery</cgi>
+            <cgi reqid="386" respid="1000000386" nettype="1" netstrategy="0" netproto="2" netchannel="1">ts_payorderquery</cgi>
+            <cgi reqid="431" respid="1000000431" nettype="1" netstrategy="0" netproto="2" netchannel="1">payauthnative</cgi>
+            <cgi reqid="396" respid="1000000396" nettype="1" netstrategy="0" netproto="2" netchannel="1">offlinegetmsg</cgi>
+            <cgi reqid="492" respid="1000000492" nettype="1" netstrategy="0" netproto="2" netchannel="1">sns_ff_qrcodeusebindquery</cgi>
+            <cgi reqid="364" respid="1000000364" nettype="1" netstrategy="0" netproto="2" netchannel="1">banpaybindauthen</cgi>
+            <cgi reqid="398" respid="1000000398" nettype="1" netstrategy="0" netproto="2" netchannel="1">offlineackmsg</cgi>
+            <cgi reqid="491" respid="1000000491" nettype="1" netstrategy="0" netproto="2" netchannel="1">sns_ff_verifyreg</cgi>
+            <cgi reqid="400" respid="1000000400" nettype="1" netstrategy="0" netproto="2" netchannel="1">offlinegettoken</cgi>
+            <cgi reqid="490" respid="1000000490" nettype="1" netstrategy="0" netproto="2" netchannel="1">sns_ff_verify</cgi>
+            <cgi reqid="489" respid="1000000489" nettype="1" netstrategy="0" netproto="2" netchannel="1">sns_ff_authen</cgi>
+            <cgi reqid="403" respid="1000000403" nettype="1" netstrategy="0" netproto="2" netchannel="1">qrcodeusebindquery</cgi>
+            <cgi reqid="404" respid="1000000404" nettype="1" netstrategy="0" netproto="2" netchannel="1">ts_cancelpay</cgi>
+            <cgi reqid="405" respid="1000000405" nettype="1" netstrategy="0" netproto="2" netchannel="1">offlinepayauthen</cgi>
+            <cgi reqid="406" respid="1000000406" nettype="1" netstrategy="0" netproto="2" netchannel="1">offlineqrcodeusebindquery</cgi>
+            <cgi reqid="407" respid="1000000407" nettype="1" netstrategy="0" netproto="2" netchannel="1">authen</cgi>
+            <cgi reqid="365" respid="1000000365" nettype="1" netstrategy="0" netproto="2" netchannel="1">banpaybindverify</cgi>
+            <cgi reqid="427" respid="1000000427" nettype="1" netstrategy="0" netproto="2" netchannel="1">qrcodeuse</cgi>
+            <cgi reqid="426" respid="1000000426" nettype="1" netstrategy="0" netproto="2" netchannel="1">paybindquerynew</cgi>
+            <cgi reqid="413" respid="1000000413" nettype="1" netstrategy="0" netproto="2" netchannel="1">offlinecancelpay</cgi>
+            <cgi reqid="414" respid="1000000414" nettype="1" netstrategy="0" netproto="2" netchannel="1">offlinequeryorder</cgi>
+            <cgi reqid="415" respid="1000000415" nettype="1" netstrategy="0" netproto="2" netchannel="1">payorderquery</cgi>
+            <cgi reqid="425" respid="1000000425" nettype="1" netstrategy="0" netproto="2" netchannel="1">lqtpaybindauthen</cgi>
+            <cgi reqid="417" respid="1000000417" nettype="1" netstrategy="0" netproto="2" netchannel="1">verify</cgi>
+            <cgi reqid="418" respid="1000000418" nettype="1" netstrategy="0" netproto="2" netchannel="1">lqtpaybindverify</cgi>
+            <cgi reqid="424" respid="1000000424" nettype="1" netstrategy="0" netproto="2" netchannel="1">getusertoken</cgi>
+            <cgi reqid="420" respid="1000000420" nettype="1" netstrategy="0" netproto="2" netchannel="1">verifyreg</cgi>
+            <cgi reqid="378" respid="1000000378" nettype="1" netstrategy="0" netproto="2" netchannel="1">gendigitalcert</cgi>
+            <cgi reqid="494" respid="1000000494" nettype="1" netstrategy="0" netproto="2" netchannel="1">sns_ff_cancelpay</cgi>
+            <cgi reqid="361" respid="1000000361" nettype="1" netstrategy="0" netproto="2" netchannel="1">verifybind</cgi>
+            <cgi reqid="493" respid="1000000493" nettype="1" netstrategy="0" netproto="2" netchannel="1">sns_ff_payorderquery</cgi>
+            <cgi reqid="360" respid="1000000360" nettype="1" netstrategy="0" netproto="2" netchannel="1">checkpwd</cgi>
+            <cgi reqid="375" respid="1000000375" nettype="1" netstrategy="0" netproto="2" netchannel="1">offlinecreate</cgi>
+        </cgilist>
+    </function>
+    <function name="newyear">
+        <domainlist connecttype="short" nettype="1" netstrategy="0" netproto="2" netchannel="1">
+            <domain idc="3">newyear.weixin.qq.com</domain>
+        </domainlist>
+        <cgilist prefix="/cgi-bin/micromsg-bin/" fuzzy="0">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">newyearscanreport2017</cgi>
+        </cgilist>
+    </function>
+    <function name="short6">
+        <domainlist connecttype="short" nettype="1" netstrategy="0" netproto="2" netchannel="1">
+            <domain idc="1">short6.weixin.qq.com</domain>
+            <domain idc="2">hkshort6.weixin.qq.com</domain>
+            <domain idc="3">szshort6.weixin.qq.com</domain>
+            <domain idc="8">mlshort6.weixin.qq.com</domain>
+            <domain idc="9">sgshort.wechat.com</domain>
+        </domainlist>
+        <cgilist prefix="/cgi-bin/mmbiz-bin/" fuzzy="0">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">sdk_oauth_authorize</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">sdk_oauth_authorize_confirm</cgi>
+        </cgilist>
+    </function>
+    <function name="disas">
+        <domainlist connecttype="short" nettype="1" netstrategy="0" netproto="2" netchannel="1">
+            <domain idc="1">shdisas.weixin.qq.com</domain>
+            <domain idc="2">hkdisas.weixin.qq.com</domain>
+            <domain idc="3">szdisas.weixin.qq.com</domain>
+            <domain idc="8">mldisas.weixin.qq.com</domain>
+        </domainlist>
+        <cgilist prefix="/cgi-bin/micromsg-bin/" fuzzy="0">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">disasterauth</cgi>
+        </cgilist>
+    </function>
+    <function name="axshort">
+        <domainlist connecttype="short" nettype="1" netstrategy="0" netproto="2" netchannel="1">
+            <domain idc="1">axshort.weixin.qq.com</domain>
+            <domain idc="2">hkaxshort.weixin.qq.com</domain>
+            <domain idc="3">szaxshort.weixin.qq.com</domain>
+            <domain idc="8">mlaxshort.weixin.qq.com</domain>
+            <domain idc="9">sgaxshort.wechat.com</domain>
+        </domainlist>
+        <cgilist prefix="/cgi-bin/micromsg-bin/" fuzzy="0">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">a3auth</cgi>
+        </cgilist>
+    </function>
+    <function name="snspay">
+        <domainlist connecttype="short" nettype="1" netstrategy="0" netproto="2" netchannel="1">
+            <domain idc="1">short.snspay.wechatpay.cn</domain>
+            <domain idc="1">shshort.snspay.wechatpay.cn</domain>
+            <domain idc="2">hkshort.snspay.wechatpay.cn</domain>
+            <domain idc="3">szshort.snspay.wechatpay.cn</domain>
+            <domain idc="8">mlshort.snspay.wechatpay.cn</domain>
+            <domain idc="9">sgshort.snspay.wechat.com</domain>
+        </domainlist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/" fuzzy="0">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">personalpayplaceorder</cgi>
+            <cgi reqid="627" respid="1000000627" nettype="1" netstrategy="0" netproto="2" netchannel="1">qrylistwxhb</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">newaaquerypfinfo</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_pp_authen</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_pp_cancelpay</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_pp_querycashier</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">transferphonechangeswitch</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">transferphonecheckname</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">transferphonedelhisrcvr</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">transferphonegethisrcvrs</cgi>
+            <cgi reqid="614" respid="1000000614" nettype="1" netstrategy="0" netproto="2" netchannel="1">transferoperation</cgi>
+            <cgi reqid="616" respid="1000000616" nettype="1" netstrategy="0" netproto="2" netchannel="1">transferplaceorder</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">personalpaycancelpay</cgi>
+            <cgi reqid="613" respid="1000000613" nettype="1" netstrategy="0" netproto="2" netchannel="1">transferquery</cgi>
+            <cgi reqid="611" respid="1000000611" nettype="1" netstrategy="0" netproto="2" netchannel="1">transferresendmsg</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">checkbankbind_tsbc</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">deleterecord_tsbc</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">modifyexplain_tsbc</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">operation_tsbc</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">querydetail_tsbc</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">reportpayres_tsbc</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">request_tsbc</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">tsrecordlist_tsbc</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">personalpayrequestpayment</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">pullmessage</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">mmpayweworkuniontransferappsvr_transfer_querydetail</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_aa_authenretry</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">transfergetchargefee</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">mmpayweworkuniontransferappsvr_transfer_notify</cgi>
+            <cgi reqid="597" respid="1000000597" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_tf_banbindauthen</cgi>
+            <cgi reqid="589" respid="1000000589" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_tf_banbindverify</cgi>
+            <cgi reqid="588" respid="1000000588" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_tf_verifyreg</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_pp_authenretry</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_pp_verify</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">h5f2ftransferscanqrcode</cgi>
+            <cgi reqid="585" respid="1000000585" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2verifyreg</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_aa_lqtbindauthen</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_aa_lqtbindverify</cgi>
+            <cgi reqid="610" respid="1000000610" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_tf_lqtbindauthen</cgi>
+            <cgi reqid="596" respid="1000000596" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_tf_lqtbindverify</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">sns_f2f_yunshanfu_getresult</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">sns_f2f_yunshanfu_order</cgi>
+            <cgi reqid="592" respid="1000000592" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2banbindauthen</cgi>
+            <cgi reqid="593" respid="1000000593" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2banbindverify</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">h5transferoperate</cgi>
+            <cgi reqid="626" respid="1000000626" nettype="1" netstrategy="0" netproto="2" netchannel="1">qrydetailwxhb</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">closefundaccount</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">onclickpurchase</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">onclickreddot</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">onclickredeem</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">personalpaypaycheck</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">preredeemfund</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">mmpaylqtfixeddepositappsvr_GetEntrancePage</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">mmpaylqtfixeddepositappsvr_GetDepositPage</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">mmpaylqtfixeddepositappsvr_GetPlanListPage</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">mmpaylqtfixeddepositappsvr_GetPlanDetailPage</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">mmpaylqtfixeddepositappsvr_AddPlan</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">addplan</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">manageplan</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">modifyplan</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">checkhoneypayer</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">h5requestwxhb</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">checkhoneyuser</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">createhoneypaycard</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">createhpcardtoken</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">gethpcard</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">gmcreditlinetoken</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">honeypayerlist</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">newaaclose</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">newaalaunchbymoney</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">newaalaunchbypayercustomize</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">newaalaunchbyperson</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">h5operationwxhb</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">newaaoperation</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_aa_authen</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_aa_cancelpay</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_aa_querycashier</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_aa_verify</cgi>
+            <cgi reqid="595" respid="1000000595" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_tf_authen</cgi>
+            <cgi reqid="590" respid="1000000590" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_tf_cancelpay</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">transferphonegetswitch</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">transferphonehomepage</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">transfermsgcheck</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">h5f2ftransfercancelpay</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">appointbank_tsbc</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">busscb_tsbc</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">personalpaysuccpage</cgi>
+            <cgi reqid="625" respid="1000000625" nettype="1" netstrategy="0" netproto="2" netchannel="1">openwxhb</cgi>
+            <cgi reqid="621" respid="1000000621" nettype="1" netstrategy="0" netproto="2" netchannel="1">operationwxhb</cgi>
+            <cgi reqid="622" respid="1000000622" nettype="1" netstrategy="0" netproto="2" netchannel="1">sharewxhb</cgi>
+            <cgi reqid="619" respid="1000000619" nettype="1" netstrategy="0" netproto="2" netchannel="1">yearrequestwxhb</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">purchasefrombankguidestat</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">purchasefund</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">qrypurchaseresult</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">h5f2ftransfergetqrcode</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">qryusrfunddetail</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">redeemfund</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">mmpaylqtfixeddepositappsvr_EditPlan</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">mmpaylqtfixeddepositappsvr_PausePlan</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">mmpaylqtfixeddepositappsvr_StartPlan</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">mmpaylqtfixeddepositappsvr_DeletePlan</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">mmpaylqtfixeddepositappsvr_GetPlanRecord</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">planindex</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">preaddplan</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">qryautoplanorderlist</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">h5f2ftransferpay</cgi>
+            <cgi reqid="599" respid="1000000599" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_tf_querycashier</cgi>
+            <cgi reqid="594" respid="1000000594" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_tf_verify</cgi>
+            <cgi reqid="567" respid="1000000567" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2apppay</cgi>
+            <cgi reqid="600" respid="1000000600" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2authen</cgi>
+            <cgi reqid="586" respid="1000000586" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2cancelpay</cgi>
+            <cgi reqid="598" respid="1000000598" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2querycashier</cgi>
+            <cgi reqid="570" respid="1000000570" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2verify</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">snsv2_jsapi_querycashier</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">transferphonegetrcvr</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">transferphonepaycheck</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">h5requesttransfer</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">transferphoneplaceorder</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">transferphonesuccpage</cgi>
+            <cgi reqid="617" respid="1000000617" nettype="1" netstrategy="0" netproto="2" netchannel="1">beforetransfer</cgi>
+            <cgi reqid="612" respid="1000000612" nettype="1" netstrategy="0" netproto="2" netchannel="1">gettransferwording</cgi>
+            <cgi reqid="615" respid="1000000615" nettype="1" netstrategy="0" netproto="2" netchannel="1">transferoldpaycheck</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getbankinfo_tsbc</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getbanklist_tsbc</cgi>
+            <cgi reqid="623" respid="1000000623" nettype="1" netstrategy="0" netproto="2" netchannel="1">receivewxhb</cgi>
+            <cgi reqid="620" respid="1000000620" nettype="1" netstrategy="0" netproto="2" netchannel="1">requestwxhb</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">modifyhppayercreditline</cgi>
+            <cgi reqid="629" respid="1000000629" nettype="1" netstrategy="0" netproto="2" netchannel="1">deletelistwxhb</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">modifyhppayerpayway</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">qryhpcarddetail</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">qryhppayerdetail</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">qryhpusererdetail</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">unbindhpcard</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">newaapay</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">newaapaysucc</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">newaapayurge</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">newaaquerydetail</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">newaaquerylist</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/ftfhb/" fuzzy="0">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">channelliveqrydetailwxhb</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">ffwxhbinvalidateshareurl</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">channelliveopenwxhb</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">channelliveoperationwxhb</cgi>
+            <cgi reqid="630" respid="1000000630" nettype="1" netstrategy="0" netproto="2" netchannel="1">businesscallbackwxhb</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">channellivereceivewxhb</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">channelliverequestwxhb</cgi>
+            <cgi reqid="635" respid="1000000635" nettype="1" netstrategy="0" netproto="2" netchannel="1">gethbrefundconfig</cgi>
+            <cgi reqid="633" respid="1000000633" nettype="1" netstrategy="0" netproto="2" netchannel="1">wxhbreport</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">ffclearwxhb</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">ffopenwxhb</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">ffquerydowxhb</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">ffrequestwxhb</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/hb/" fuzzy="1">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">*</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/lqtlqautoin/" fuzzy="0">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">openlqautotrans</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">qrysetting</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">closeautolqtolqt</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">modifytrantime</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/pa/" fuzzy="1">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">*</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/pt/" fuzzy="1">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">*</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/tenpay/" fuzzy="0">
+            <cgi reqid="601" respid="1000000601" nettype="1" netstrategy="0" netproto="2" netchannel="1">sns_tf_cancelpay</cgi>
+            <cgi reqid="579" respid="1000000579" nettype="1" netstrategy="0" netproto="2" netchannel="1">sns_tf_verifyreg</cgi>
+            <cgi reqid="571" respid="1000000571" nettype="1" netstrategy="0" netproto="2" netchannel="1">sns_tf_payorderquery</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">sns_aa_qrcodeusebindquery</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">sns_aa_authen</cgi>
+            <cgi reqid="609" respid="1000000609" nettype="1" netstrategy="0" netproto="2" netchannel="1">sns_payorderquery</cgi>
+            <cgi reqid="576" respid="1000000576" nettype="1" netstrategy="0" netproto="2" netchannel="1">snsverify</cgi>
+            <cgi reqid="606" respid="1000000606" nettype="1" netstrategy="0" netproto="2" netchannel="1">sns_verify</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">sns_aa_cancelpay</cgi>
+            <cgi reqid="607" respid="1000000607" nettype="1" netstrategy="0" netproto="2" netchannel="1">sns_verifyreg</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/tf/" fuzzy="1">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">*</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/unionhb/" fuzzy="0">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">businesscallbackunionhb</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">openunionhb</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">operationunionhb</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">qrydetailunionhb</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">receiveunionhb</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">requestunionhb</cgi>
+        </cgilist>
+    </function>
+    <function name="mixpay">
+        <domainlist connecttype="short" nettype="1" netstrategy="0" netproto="2" netchannel="1">
+            <domain idc="1">short.mixpay.wechatpay.cn</domain>
+            <domain idc="1">shshort.mixpay.wechatpay.cn</domain>
+            <domain idc="2">hkshort.mixpay.wechatpay.cn</domain>
+            <domain idc="3">szshort.mixpay.wechatpay.cn</domain>
+            <domain idc="8">mlshort.mixpay.wechatpay.cn</domain>
+            <domain idc="9">sgshort.mixpay.wechat.com</domain>
+        </domainlist>
+        <cgilist prefix="/cgi-bin/micromsg-bin/" fuzzy="0">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">batchgetcarditembytpinfo</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getcardconfiginfo</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getcardslayout</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">batchdelcarditem</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">giftcarditem</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getavailablecard</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getsharecardlist</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">preacceptgiftcard</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">acceptgiftcard</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getofflinepayinfo</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getcardlistfromapp</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getcarditeminfo</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">acceptcardlistfromapp</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getcardgiftinfo</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getdynamiccardcode</cgi>
+            <cgi reqid="370" respid="1000000370" nettype="1" netstrategy="0" netproto="2" netchannel="1">paysubscribe</cgi>
+            <cgi reqid="187" respid="1000000187" nettype="1" netstrategy="0" netproto="2" netchannel="1">paydeluserroll</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">commentsharecard</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">evaluateorder</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">genbiziapprepay</cgi>
+            <cgi reqid="234" respid="1000000234" nettype="1" netstrategy="0" netproto="2" netchannel="1">getbiziapdetail</cgi>
+            <cgi reqid="235" respid="1000000235" nettype="1" netstrategy="0" netproto="2" netchannel="1">getbiziappayresult</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">batchgetcarditem</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getcomment</cgi>
+            <cgi reqid="229" respid="1000000229" nettype="1" netstrategy="0" netproto="2" netchannel="1">getlatestpayproductinfo</cgi>
+            <cgi reqid="228" respid="1000000228" nettype="1" netstrategy="0" netproto="2" netchannel="1">getpayfunctionproductlist</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getsharecard</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getsharecardslayout</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">marksharecard</cgi>
+            <cgi reqid="186" respid="1000000186" nettype="1" netstrategy="0" netproto="2" netchannel="1">payqueryuserroll</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">removevirtualbankcard</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">reportdynamiccardcodeaction</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">setmainbankcard</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">cardsync</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">sharecarditem</cgi>
+            <cgi reqid="230" respid="1000000230" nettype="1" netstrategy="0" netproto="2" netchannel="1">submitpayproductbuyinfo</cgi>
+            <cgi reqid="346" respid="1000000346" nettype="1" netstrategy="0" netproto="2" netchannel="1">pay-geta8key</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">oppatternlock</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">registernewpatternlock</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getcardcount</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">sharecardsync</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getcardserial</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">cardshoplbs</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">acceptcarditem</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmbiz-bin/card/" fuzzy="0">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">reportlocation</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getcardshomepage</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getlbscard</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">cancelshakecard</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">cleanrecentinfo</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">delsharecard</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getsharecardconsumedinfo</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">shakecard</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/" fuzzy="1">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">*</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/applynfc/" fuzzy="0">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">applynfccard</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/deposit/" fuzzy="0">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">querydeposit</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/ff/" fuzzy="1">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">*</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/ftfhb/" fuzzy="0">
+            <cgi reqid="632" respid="1000000632" nettype="1" netstrategy="0" netproto="2" netchannel="1">confirmshowsource</cgi>
+            <cgi reqid="631" respid="1000000631" nettype="1" netstrategy="0" netproto="2" netchannel="1">getshowsource</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">createluckyhb</cgi>
+            <cgi reqid="634" respid="1000000634" nettype="1" netstrategy="0" netproto="2" netchannel="1">deleteshowsource</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">ffauthreceivewxhb</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">openluckyhb</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">operationluckyhb</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">qrydetailluckyhb</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">recluckyhb</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/industry/" fuzzy="1">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">*</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/invoice/userinvoices/" fuzzy="0">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getinvoicecategory</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">getuserinvoices</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">selectedinvoicesreport</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/mkt/" fuzzy="1">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">*</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/nfccards/" fuzzy="0">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">querynfccardinfo</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/ops/" fuzzy="1">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">*</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/order/" fuzzy="0">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">createorder</cgi>
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">queryorder</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/riskaggr/" fuzzy="0">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">riskaggrverifysign</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/sec/" fuzzy="1">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">*</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/smbp/" fuzzy="1">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">*</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/tengan/" fuzzy="1">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">*</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/tenpay/" fuzzy="1">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">*</cgi>
+        </cgilist>
+        <cgilist prefix="/cgi-bin/mmpay-bin/webank/" fuzzy="1">
+            <cgi nettype="1" netstrategy="0" netproto="2" netchannel="1">*</cgi>
+        </cgilist>
+    </function>
+    <function name="finder">
+        <domainlist connecttype="short" nettype="1" netstrategy="0" netproto="2" netchannel="1">
+            <domain idc="1">findershort.weixin.qq.com</domain>
+            <domain idc="2">hkfindershort.weixin.qq.com</domain>
+            <domain idc="3">szfindershort.weixin.qq.com</domain>
+            <domain idc="8">mlfindershort.weixin.qq.com</domain>
+            <domain idc="9">sgfindershort.wechat.com</domain>
+        </domainlist>
+        <cgilist/>
+    </function>
+    <md5>b8ee099fca12983b4cf50f409b8ebc9e</md5>
+    <timestamp>1747117842</timestamp>
+</functionlist>
